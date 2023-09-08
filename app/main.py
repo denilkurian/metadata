@@ -91,7 +91,6 @@ if __name__ == "__main__":
 import networkx as nx
 
 
-
 # Endpoint to generate lineage
 @app.get("/lineage/{table_name}")
 def generate_lineage(table_name: str):
@@ -129,6 +128,7 @@ def generate_lineage(table_name: str):
     lineage_json = nx.readwrite.json_graph.node_link_data(lineage_graph)
 
     return {"lineage": lineage_json}
+
 
 
 
