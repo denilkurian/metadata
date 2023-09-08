@@ -65,9 +65,8 @@ def get_table_metadata_summary(table_name: str):
         create_time_params = {"db_name": "school", "table_name": table_name}
         create_time = connection.execute(create_time_query, create_time_params).scalar()
 
-        # Fetch table description (if available)
-        # This may require an external documentation system or a convention for storing descriptions
-        table_description = "Table description goes here"  # Replace with actual description
+        
+        table_description = "Table description goes here"  
 
     # Create a metadata summary
     metadata_summary = {
@@ -89,7 +88,6 @@ if __name__ == "__main__":
 
 
 import networkx as nx
-
 
 # Endpoint to generate lineage
 @app.get("/lineage/{table_name}")
