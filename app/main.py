@@ -2,10 +2,18 @@ from fastapi import FastAPI
 from sqlalchemy import MetaData,text,func
 from database.database import engine
 
+
 app = FastAPI()
 
 metadata = MetaData()
 metadata.bind = engine
+
+
+######## loading of crawling of metadata from database
+from meta.meta_crawl import router
+
+app.include_router(router)
+
 
 
 # api for Fetch all tables in the database
@@ -126,6 +134,19 @@ def generate_lineage(table_name: str):
     lineage_json = nx.readwrite.json_graph.node_link_data(lineage_graph)
 
     return {"lineage": lineage_json}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
