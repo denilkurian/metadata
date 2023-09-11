@@ -1,10 +1,13 @@
 
-from fastapi import APIRouter
+from fastapi import APIRouter,HTTPException
 from sqlalchemy import create_engine, MetaData, Table
 from sqlalchemy.ext.declarative import declarative_base
 import urllib.parse
 from database.database import database_urls, username, password, host, port, database_name
-from sqlalchemy.exc import OperationalError
+
+import smtplib
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
 
 
 # Create an APIRouter instance
@@ -57,10 +60,40 @@ async def crawl_metadata(db_name: str):
                 "primary_key": [column.name for column in table.primary_key],
             }
 
+        # Send email notification when crawling is done
+        send_email_notification(db_name)
+
         return {"message": f"Metadata crawl job initiated for {db_name}", "metadata": table_metadata}
 
     except Exception as e:
         return {"error": f"Database error: {str(e)}"}
+
+def send_email_notification(db_name):
+    # Email configuration
+    SMTP_SERVER = "smtp.gmail.com"
+    SMTP_PORT = 587  
+    SMTP_USERNAME = "denilk@datapmi.com"
+    SMTP_PASSWORD = "gjjtderpsuuxtvgp"
+    SENDER_EMAIL = "denilk@datapmi.com"
+    RECIPIENT_EMAIL = "sripada@datapmi.com"
+
+    subject = f"Metadata Crawl Job Finished for {db_name}"
+    message = f"The metadata crawl job for {db_name} has finished."
+
+    msg = MIMEMultipart()
+    msg['From'] = SENDER_EMAIL
+    msg['To'] = RECIPIENT_EMAIL
+    msg['Subject'] = subject
+    msg.attach(MIMEText(message, 'plain'))
+
+    try:
+        server = smtplib.SMTP(SMTP_SERVER, SMTP_PORT)
+        server.starttls()
+        server.login(SMTP_USERNAME, SMTP_PASSWORD)
+        server.sendmail(SENDER_EMAIL, RECIPIENT_EMAIL, msg.as_string())
+        server.quit()
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Email sending failed: {str(e)}")
 
 
 
