@@ -8,7 +8,7 @@ from database.database import database_urls, username, password, host, port, dat
 import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
-
+from decouple import config
 
 # Create an APIRouter instance
 router = APIRouter()
@@ -68,14 +68,22 @@ async def crawl_metadata(db_name: str):
     except Exception as e:
         return {"error": f"Database error: {str(e)}"}
 
+
+
+
 def send_email_notification(db_name):
     # Email configuration
-    SMTP_SERVER = "smtp.gmail.com"
-    SMTP_PORT = 587  
-    SMTP_USERNAME = "denilk@datapmi.com"
-    SMTP_PASSWORD = "gjjtderpsuuxtvgp"
-    SENDER_EMAIL = "denilk@datapmi.com"
-    RECIPIENT_EMAIL = "sripada@datapmi.com"
+    
+    SMTP_SERVER = config('SMTP_SERVER', default='')
+    SMTP_PORT = config('SMTP_PORT', default=587, cast=int)
+    SMTP_USERNAME = config('SMTP_USERNAME', default='')
+    SMTP_PASSWORD = config('SMTP_PASSWORD', default='')
+    SENDER_EMAIL = config('SENDER_EMAIL', default='')
+    RECIPIENT_EMAIL = config('RECIPIENT_EMAIL', default='')
+
+# Your send_email_notification function here
+
+
 
     subject = f"Metadata Crawl Job Finished for {db_name}"
     message = f"The metadata crawl job for {db_name} has finished."
@@ -94,6 +102,8 @@ def send_email_notification(db_name):
         server.quit()
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Email sending failed: {str(e)}")
+
+
 
 
 
