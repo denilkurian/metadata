@@ -33,7 +33,7 @@ async def crawl_metadata(db_name: str):
         port=port,
         database_name=database_name,
     )
-
+    
     try:
         # Create the database engine
         engine = create_engine(DATABASE_URL, echo=True)
@@ -69,7 +69,7 @@ async def crawl_metadata(db_name: str):
         return {"error": f"Database error: {str(e)}"}
 
 
-  
+
 def send_email_notification(db_name):
     # Email configuration
     
@@ -80,11 +80,11 @@ def send_email_notification(db_name):
     SENDER_EMAIL = config('SENDER_EMAIL', default='')
     RECIPIENT_EMAIL = config('RECIPIENT_EMAIL', default='')
 
-# send_email_notification function here
+    # send_email_notification function here
 
 
     subject = f"Metadata Crawl Job Finished for {db_name}"
-    message = f"The metadata crawl job for {db_name} has finished."
+    message = f"The metadata crawl job for {db_name} has finished.Database metadata details such as table names column datatype etc are defined"
 
     msg = MIMEMultipart()
     msg['From'] = SENDER_EMAIL
@@ -101,6 +101,7 @@ def send_email_notification(db_name):
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Email sending failed: {str(e)}")
     
+
 
 
 
