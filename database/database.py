@@ -30,8 +30,6 @@ database_name = "school"
 url_template = "{db_url}://{username}:{password}@{host}:{port}/{database_name}"
 db_url = database_urls.get(selected_database, None)
 
-if db_url is None:
-    raise ValueError(f"Unsupported database type: {selected_database}")
 
 DATABASE_URL = url_template.format(
     db_url=db_url,
