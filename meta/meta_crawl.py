@@ -2,7 +2,8 @@
 from fastapi import APIRouter,HTTPException
 from sqlalchemy import create_engine, MetaData, Table
 from sqlalchemy.ext.declarative import declarative_base
-from database.database import database_urls,DATABASE_URL
+import urllib.parse
+from database.database import database_urls, username, password, host, port, database_name
 
 import smtplib
 from email.mime.text import MIMEText
@@ -21,6 +22,17 @@ async def crawl_metadata(db_name: str):
 
     if db_url is None:
         return {"error": f"Unsupported database type: {db_name}"}
+
+    # Create the connection URL using the selected database type
+    url_template = "{db_url}://{username}:{password}@{host}:{port}/{database_name}"
+    DATABASE_URL = url_template.format(
+        db_url=db_url,
+        username=username,
+        password=urllib.parse.quote_plus(password),
+        host=host,
+        port=port,
+        database_name=database_name,
+    )
 
     try:
         # Create the database engine
@@ -56,8 +68,8 @@ async def crawl_metadata(db_name: str):
     except Exception as e:
         return {"error": f"Database error: {str(e)}"}
 
-  
 
+  
 def send_email_notification(db_name):
     # Email configuration
     
@@ -68,7 +80,7 @@ def send_email_notification(db_name):
     SENDER_EMAIL = config('SENDER_EMAIL', default='')
     RECIPIENT_EMAIL = config('RECIPIENT_EMAIL', default='')
 
-    # send_email_notification function here
+# send_email_notification function here
 
 
     subject = f"Metadata Crawl Job Finished for {db_name}"
@@ -88,9 +100,7 @@ def send_email_notification(db_name):
         server.quit()
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Email sending failed: {str(e)}")
-
-
-
+    
 
 
 
