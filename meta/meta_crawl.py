@@ -1,14 +1,10 @@
 
-from fastapi import APIRouter,HTTPException
-from sqlalchemy import create_engine, MetaData, Table
-from sqlalchemy.ext.declarative import declarative_base
+from fastapi import APIRouter
+from sqlalchemy import create_engine, MetaData
 import urllib.parse
 from database.database import database_urls, username, password, host, port, database_name
+from notification.email import send_email_notification
 
-import smtplib
-from email.mime.text import MIMEText
-from email.mime.multipart import MIMEMultipart
-from decouple import config
 
 # Create an APIRouter instance
 router = APIRouter()
@@ -33,7 +29,7 @@ async def crawl_metadata(db_name: str):
         port=port,
         database_name=database_name,
     )
-    
+
     try:
         # Create the database engine
         engine = create_engine(DATABASE_URL, echo=True)
@@ -70,39 +66,8 @@ async def crawl_metadata(db_name: str):
 
 
 
-def send_email_notification(db_name):
-    # Email configuration
+
     
-    SMTP_SERVER = config('SMTP_SERVER', default='')
-    SMTP_PORT = config('SMTP_PORT', default=587, cast=int)
-    SMTP_USERNAME = config('SMTP_USERNAME', default='')
-    SMTP_PASSWORD = config('SMTP_PASSWORD', default='')
-    SENDER_EMAIL = config('SENDER_EMAIL', default='')
-    RECIPIENT_EMAIL = config('RECIPIENT_EMAIL', default='')
-
-    # send_email_notification function here
-
-
-    subject = f"Metadata Crawl Job Finished for {db_name}"
-    message = f"The metadata crawl job for {db_name} has finished.Database metadata details such as table names column datatype etc are defined"
-
-    msg = MIMEMultipart()
-    msg['From'] = SENDER_EMAIL
-    msg['To'] = RECIPIENT_EMAIL
-    msg['Subject'] = subject
-    msg.attach(MIMEText(message, 'plain'))
-
-    try:
-        server = smtplib.SMTP(SMTP_SERVER, SMTP_PORT)
-        server.starttls()
-        server.login(SMTP_USERNAME, SMTP_PASSWORD)
-        server.sendmail(SENDER_EMAIL, RECIPIENT_EMAIL, msg.as_string())
-        server.quit()
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=f"Email sending failed: {str(e)}")
-    
-
-
 
 
 
