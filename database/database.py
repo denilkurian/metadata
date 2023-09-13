@@ -1,8 +1,8 @@
-
 from sqlalchemy import create_engine, MetaData
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 import urllib.parse
+from sqlalchemy.orm import Session
 
 Base = declarative_base()
 
@@ -19,12 +19,18 @@ database_urls = {
 # Specify the database type you want to use
 selected_database = "mysql"  # Change this to the desired database type
 
+
 # Database connection parameters
 username = "root"
 password = "denil_kurian@123"
 host = "localhost"
 port = 3306
-database_name = "school"
+database_name = "ecommerce"
+
+
+def get_db_name():
+    return database_name  
+
 
 # Create the connection URL using the selected database type
 url_template = "{db_url}://{username}:{password}@{host}:{port}/{database_name}"
@@ -47,8 +53,12 @@ metadata = MetaData()
 
 
 
-
-
+def get_db() -> Session:
+    db = SessionLocal()
+    try:
+        yield db
+    finally:
+        db.close()
 
 
 
