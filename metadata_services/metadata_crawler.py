@@ -1,6 +1,6 @@
 
 from fastapi import APIRouter
-from sqlalchemy import create_engine, MetaData
+from sqlalchemy import create_engine, MetaData,inspect
 import urllib.parse
 from database.database import database_urls, username, password, host, port, database_name
 from notification_services.email import send_email_notification
@@ -37,6 +37,7 @@ async def crawl_metadata(db_name: str):
 
         # Reflect all tables in the database
         metadata.reflect(bind=engine)
+        inspector = inspect(engine)
 
         # Get a list of all table names in the database
         table_names = metadata.tables.keys()
@@ -51,9 +52,20 @@ async def crawl_metadata(db_name: str):
                     "name": column.name,
                     "type": str(column.type),  # Get the data type as a string
                 })
+
+            foreign_keys = []
+            for foreign_key in inspector.get_foreign_keys(table_name):
+                foreign_keys.append({
+                    "column": foreign_key['constrained_columns'][0],
+                    "referenced_table": foreign_key['referred_table'],
+                })
+
+
+
             table_metadata[table_name] = {
                 "columns": columns,
                 "primary_key": [column.name for column in table.primary_key],
+                "foreign_keys": foreign_keys,
             }
 
         # Send email notification when crawling is done
@@ -68,13 +80,5 @@ async def crawl_metadata(db_name: str):
 
 
     
-
-
-
-
-
-
-
-
 
 

@@ -1,0 +1,4 @@
+2023-09-14 17:40:21,154 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : SHOW TABLES;
+2023-09-14 17:40:21,156 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : [generated in 0.00207s] {}
+2023-09-14 17:40:21,159 - INFO - metadata_services.fetch_tables - AnyIO worker thread : Successfully retrieved tables from the database
+2023-09-14 17:43:57,909 - ERROR - root - MainThread : An error occurred while processing request: division by zero

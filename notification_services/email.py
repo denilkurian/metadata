@@ -1,3 +1,5 @@
+
+######### in this session when we fetch metadata details from any database and an email notification send to the configured mail
 import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart

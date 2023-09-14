@@ -1,32 +1,33 @@
 from fastapi import FastAPI
 
-
 app = FastAPI()
 
-
+import redis
+from logging_service.logs import configure_logging,error_middleware
 ######## router composition in main.py file
 from metadata_services import fetch_tables,metadata_table,fetch_summary,lineage_table,metadata_crawler
 from backend_services import fast_api,caching_redis
 from authentication_authorisation import login_token,registration
+from circuitbreaker_config import circuit_breaker
 
-#######metadata
+####### metadata
 app.include_router(metadata_crawler.router)
 app.include_router(fetch_tables.router)
 app.include_router(metadata_table.router)
 app.include_router(fetch_summary.router)
 app.include_router(lineage_table.router)
 
-######product data
+###### product data
 app.include_router(fast_api.router)
 app.include_router(caching_redis.router)
 
-#######authentication
+####### authentication
 app.include_router(login_token.router)
 app.include_router(registration.router)
 
+##### circuit breaker
+app.include_router(circuit_breaker.router)
 
-
-import redis
 #########3 caching
 # Initialize the Redis connection in the app startup event
 @app.on_event("startup")
@@ -39,6 +40,15 @@ async def startup_event():
 async def shutdown_event():
     app.state.redis.close()
     await app.state.redis.wait_closed()
+
+
+
+
+####### loading logging function to the main app
+configure_logging() 
+app.middleware("http")(error_middleware)
+
+
 
 
 

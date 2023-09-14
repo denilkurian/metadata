@@ -127,37 +127,3 @@ def get_user_favorite_products(current_user: User = Depends(get_current_user), d
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
