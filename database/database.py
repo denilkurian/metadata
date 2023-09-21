@@ -16,9 +16,9 @@ database_urls = {
     "redshift": "redshift+psycopg2",
 }
 
+
 # Specify the database type you want to use
 selected_database = "mysql"  # Change this to the desired database type
-
 
 # Database connection parameters
 username = "root"
@@ -59,6 +59,7 @@ def get_db() -> Session:
         yield db
     finally:
         db.close()
+
 
 
 

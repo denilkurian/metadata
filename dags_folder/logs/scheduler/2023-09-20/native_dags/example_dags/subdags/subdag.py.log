@@ -1,0 +1,5 @@
+[2023-09-20T11:58:17.016+0530] {processor.py:157} INFO - Started process (PID=20414) to work on /home/user/fastapi/metadata/myenv/lib/python3.10/site-packages/airflow/example_dags/subdags/subdag.py
+[2023-09-20T11:58:17.018+0530] {processor.py:829} INFO - Processing file /home/user/fastapi/metadata/myenv/lib/python3.10/site-packages/airflow/example_dags/subdags/subdag.py for tasks to queue
+[2023-09-20T11:58:17.019+0530] {logging_mixin.py:151} INFO - [2023-09-20T11:58:17.019+0530] {dagbag.py:539} INFO - Filling up the DagBag from /home/user/fastapi/metadata/myenv/lib/python3.10/site-packages/airflow/example_dags/subdags/subdag.py
+[2023-09-20T11:58:17.023+0530] {processor.py:841} WARNING - No viable dags retrieved from /home/user/fastapi/metadata/myenv/lib/python3.10/site-packages/airflow/example_dags/subdags/subdag.py
+[2023-09-20T11:58:17.058+0530] {processor.py:179} INFO - Processing /home/user/fastapi/metadata/myenv/lib/python3.10/site-packages/airflow/example_dags/subdags/subdag.py took 0.054 seconds

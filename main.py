@@ -1,4 +1,4 @@
-from fastapi import FastAPI
+from fastapi import FastAPI,HTTPException
 
 app = FastAPI()
 
@@ -9,6 +9,7 @@ from metadata_services import fetch_tables,metadata_table,fetch_summary,lineage_
 from backend_services import fast_api,caching_redis
 from authentication_authorisation import login_token,registration
 from circuitbreaker_config import circuit_breaker
+
 
 ####### metadata
 app.include_router(metadata_crawler.router)
@@ -28,7 +29,7 @@ app.include_router(registration.router)
 ##### circuit breaker
 app.include_router(circuit_breaker.router)
 
-#########3 caching
+######### caching
 # Initialize the Redis connection in the app startup event
 @app.on_event("startup")
 async def startup_event():
@@ -42,13 +43,9 @@ async def shutdown_event():
     await app.state.redis.wait_closed()
 
 
-
-
 ####### loading logging function to the main app
 configure_logging() 
 app.middleware("http")(error_middleware)
-
-
 
 
 

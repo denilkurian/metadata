@@ -1,0 +1,12 @@
+[2023-09-20T11:58:18.307+0530] {processor.py:157} INFO - Started process (PID=20429) to work on /home/user/fastapi/metadata/myenv/lib/python3.10/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2023-09-20T11:58:18.308+0530] {processor.py:829} INFO - Processing file /home/user/fastapi/metadata/myenv/lib/python3.10/site-packages/airflow/example_dags/tutorial_taskflow_api.py for tasks to queue
+[2023-09-20T11:58:18.310+0530] {logging_mixin.py:151} INFO - [2023-09-20T11:58:18.309+0530] {dagbag.py:539} INFO - Filling up the DagBag from /home/user/fastapi/metadata/myenv/lib/python3.10/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2023-09-20T11:58:18.325+0530] {processor.py:839} INFO - DAG(s) dict_keys(['tutorial_taskflow_api']) retrieved from /home/user/fastapi/metadata/myenv/lib/python3.10/site-packages/airflow/example_dags/tutorial_taskflow_api.py
+[2023-09-20T11:58:18.518+0530] {logging_mixin.py:151} INFO - [2023-09-20T11:58:18.518+0530] {manager.py:499} INFO - Created Permission View: %s
+[2023-09-20T11:58:18.535+0530] {logging_mixin.py:151} INFO - [2023-09-20T11:58:18.534+0530] {manager.py:499} INFO - Created Permission View: %s
+[2023-09-20T11:58:18.547+0530] {logging_mixin.py:151} INFO - [2023-09-20T11:58:18.547+0530] {manager.py:499} INFO - Created Permission View: %s
+[2023-09-20T11:58:18.548+0530] {logging_mixin.py:151} INFO - [2023-09-20T11:58:18.548+0530] {security.py:708} INFO - Not syncing DAG-level permissions for DAG 'DAG:tutorial_taskflow_api' as access control is unset.
+[2023-09-20T11:58:18.548+0530] {logging_mixin.py:151} INFO - [2023-09-20T11:58:18.548+0530] {dag.py:2915} INFO - Sync 1 DAGs
+[2023-09-20T11:58:18.566+0530] {logging_mixin.py:151} INFO - [2023-09-20T11:58:18.565+0530] {dag.py:2937} INFO - Creating ORM DAG for tutorial_taskflow_api
+[2023-09-20T11:58:18.567+0530] {logging_mixin.py:151} INFO - [2023-09-20T11:58:18.566+0530] {dag.py:3696} INFO - Setting next_dagrun for tutorial_taskflow_api to None, run_after=None
+[2023-09-20T11:58:18.601+0530] {processor.py:179} INFO - Processing /home/user/fastapi/metadata/myenv/lib/python3.10/site-packages/airflow/example_dags/tutorial_taskflow_api.py took 0.299 seconds

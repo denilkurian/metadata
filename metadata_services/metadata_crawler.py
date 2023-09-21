@@ -79,6 +79,70 @@ async def crawl_metadata(db_name: str):
 
 
 
-    
+
+########### to fetch database metadata from another resource and also implemeted caching the data in redis
+from enum import Enum
+from pydantic import BaseModel
+from sqlalchemy.orm import sessionmaker
+from main import app
+from fastapi import Depends,HTTPException
+from cachetools import TTLCache
+import aioredis
+
+# class SupportedDatabases(str, Enum):
+#     mysql = "mysql"
+#     sqlite = "sqlite"
+#     postgres = "postgres"
+#     redis = "redis"
+#     mongodb = "mongodb"
+
+class Connection(BaseModel):
+    string: str
+
+
+Session = sessionmaker()
+
+metadata = MetaData()
+
+async def fetch_metadata(connection_string: Connection):
+    source_db_url = connection_string.string
+
+    # try to fetch from Redis
+    redis = await aioredis.from_url('redis://localhost')
+    cached_metadata_redis = await redis.get(source_db_url.encode())
+    await redis.close()
+
+    if cached_metadata_redis:
+        metadata_str = cached_metadata_redis.decode()
+        print("data from redis-cache")
+        return metadata_str
+
+    # If not found in Redis, fetch from MySQL
+    engine = create_engine(source_db_url)
+    Session.configure(bind=engine)
+    session = Session()
+    metadata = MetaData()
+    metadata.reflect(bind=engine)
+    metadata_str = str(metadata.tables.values())
+
+    # Cache the data in Redis
+    redis = await aioredis.from_url('redis://localhost')
+    await redis.setex(source_db_url.encode(), 300, metadata_str.encode())
+    await redis.close()
+
+    print("data from mysql")
+    return metadata_str
+
+# Define the API endpoint
+@app.post("/any_db_metadata/", tags=["db metadata"])
+async def any_db_metadata(connection_string: Connection):
+    try:
+        metadata_str = await fetch_metadata(connection_string)
+        return metadata_str
+    except Exception as e:
+        raise HTTPException(status_code=500, detail={"error": str(e)})
+
+
+
 
 

@@ -1,0 +1,6 @@
+[2023-09-20T11:58:19.797+0530] {processor.py:157} INFO - Started process (PID=20443) to work on /home/user/fastapi/metadata/myenv/lib/python3.10/site-packages/airflow/example_dags/tutorial_taskflow_api_virtualenv.py
+[2023-09-20T11:58:19.799+0530] {processor.py:829} INFO - Processing file /home/user/fastapi/metadata/myenv/lib/python3.10/site-packages/airflow/example_dags/tutorial_taskflow_api_virtualenv.py for tasks to queue
+[2023-09-20T11:58:19.800+0530] {logging_mixin.py:151} INFO - [2023-09-20T11:58:19.799+0530] {dagbag.py:539} INFO - Filling up the DagBag from /home/user/fastapi/metadata/myenv/lib/python3.10/site-packages/airflow/example_dags/tutorial_taskflow_api_virtualenv.py
+[2023-09-20T11:58:19.805+0530] {logging_mixin.py:151} INFO - [2023-09-20T11:58:19.805+0530] {tutorial_taskflow_api_virtualenv.py:29} WARNING - The tutorial_taskflow_api_virtualenv example DAG requires virtualenv, please install it.
+[2023-09-20T11:58:19.806+0530] {processor.py:841} WARNING - No viable dags retrieved from /home/user/fastapi/metadata/myenv/lib/python3.10/site-packages/airflow/example_dags/tutorial_taskflow_api_virtualenv.py
+[2023-09-20T11:58:19.825+0530] {processor.py:179} INFO - Processing /home/user/fastapi/metadata/myenv/lib/python3.10/site-packages/airflow/example_dags/tutorial_taskflow_api_virtualenv.py took 0.033 seconds

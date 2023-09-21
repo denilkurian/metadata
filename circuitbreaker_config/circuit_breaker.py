@@ -4,6 +4,7 @@ from fastapi import APIRouter
 router = APIRouter()
 
 
+
 ########## circuit breaker
 import circuitbreaker
 import requests
@@ -20,7 +21,7 @@ class MyCircuitBreaker(circuitbreaker.CircuitBreaker):
 @MyCircuitBreaker()  
 def call_external():
     BASE_URL = "https://jsonplaceholder.typicode.com"
-    END_POINT = "posts/100"
+    END_POINT = "posts/16"
     resp = requests.get(f"{BASE_URL}/{END_POINT}") 
 
     if not resp.text:
@@ -59,11 +60,6 @@ def implement_circuit_breaker():
       "message": f"Failed get starwars data: {e}"
     }
   
-
-
-
-
-
 
 
 

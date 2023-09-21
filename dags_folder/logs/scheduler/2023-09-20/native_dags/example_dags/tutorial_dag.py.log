@@ -1,0 +1,12 @@
+[2023-09-20T11:58:20.957+0530] {processor.py:157} INFO - Started process (PID=20444) to work on /home/user/fastapi/metadata/myenv/lib/python3.10/site-packages/airflow/example_dags/tutorial_dag.py
+[2023-09-20T11:58:20.958+0530] {processor.py:829} INFO - Processing file /home/user/fastapi/metadata/myenv/lib/python3.10/site-packages/airflow/example_dags/tutorial_dag.py for tasks to queue
+[2023-09-20T11:58:20.960+0530] {logging_mixin.py:151} INFO - [2023-09-20T11:58:20.959+0530] {dagbag.py:539} INFO - Filling up the DagBag from /home/user/fastapi/metadata/myenv/lib/python3.10/site-packages/airflow/example_dags/tutorial_dag.py
+[2023-09-20T11:58:20.975+0530] {processor.py:839} INFO - DAG(s) dict_keys(['tutorial_dag']) retrieved from /home/user/fastapi/metadata/myenv/lib/python3.10/site-packages/airflow/example_dags/tutorial_dag.py
+[2023-09-20T11:58:21.175+0530] {logging_mixin.py:151} INFO - [2023-09-20T11:58:21.174+0530] {manager.py:499} INFO - Created Permission View: %s
+[2023-09-20T11:58:21.194+0530] {logging_mixin.py:151} INFO - [2023-09-20T11:58:21.193+0530] {manager.py:499} INFO - Created Permission View: %s
+[2023-09-20T11:58:21.208+0530] {logging_mixin.py:151} INFO - [2023-09-20T11:58:21.208+0530] {manager.py:499} INFO - Created Permission View: %s
+[2023-09-20T11:58:21.209+0530] {logging_mixin.py:151} INFO - [2023-09-20T11:58:21.208+0530] {security.py:708} INFO - Not syncing DAG-level permissions for DAG 'DAG:tutorial_dag' as access control is unset.
+[2023-09-20T11:58:21.209+0530] {logging_mixin.py:151} INFO - [2023-09-20T11:58:21.209+0530] {dag.py:2915} INFO - Sync 1 DAGs
+[2023-09-20T11:58:21.235+0530] {logging_mixin.py:151} INFO - [2023-09-20T11:58:21.234+0530] {dag.py:2937} INFO - Creating ORM DAG for tutorial_dag
+[2023-09-20T11:58:21.236+0530] {logging_mixin.py:151} INFO - [2023-09-20T11:58:21.235+0530] {dag.py:3696} INFO - Setting next_dagrun for tutorial_dag to None, run_after=None
+[2023-09-20T11:58:21.288+0530] {processor.py:179} INFO - Processing /home/user/fastapi/metadata/myenv/lib/python3.10/site-packages/airflow/example_dags/tutorial_dag.py took 0.337 seconds

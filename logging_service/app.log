@@ -2,3 +2,279 @@
 2023-09-14 17:40:21,156 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : [generated in 0.00207s] {}
 2023-09-14 17:40:21,159 - INFO - metadata_services.fetch_tables - AnyIO worker thread : Successfully retrieved tables from the database
 2023-09-14 17:43:57,909 - ERROR - root - MainThread : An error occurred while processing request: division by zero
+2023-09-15 09:25:00,060 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : SHOW TABLES;
+2023-09-15 09:25:00,061 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : [generated in 0.00175s] {}
+2023-09-15 09:25:00,064 - INFO - metadata_services.fetch_tables - AnyIO worker thread : Successfully retrieved tables from the database
+2023-09-15 09:25:46,016 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-15 09:25:46,027 - INFO - sqlalchemy.engine.Engine - MainThread : SELECT product.id AS product_id, product.name AS product_name, product.product_type AS product_product_type, product.price AS product_price 
+FROM product 
+WHERE product.name = %(name_1)s 
+ LIMIT %(param_1)s
+2023-09-15 09:25:46,027 - INFO - sqlalchemy.engine.Engine - MainThread : [generated in 0.00702s] {'name_1': 'nike', 'param_1': 1}
+2023-09-15 09:25:46,062 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-09-15 09:33:52,687 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-15 09:33:52,690 - INFO - sqlalchemy.engine.Engine - MainThread : SELECT product.id AS product_id, product.name AS product_name, product.product_type AS product_product_type, product.price AS product_price 
+FROM product 
+WHERE product.name = %(name_1)s 
+ LIMIT %(param_1)s
+2023-09-15 09:33:52,692 - INFO - sqlalchemy.engine.Engine - MainThread : [cached since 486.7s ago] {'name_1': 'nike', 'param_1': 1}
+2023-09-15 09:33:52,711 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-09-15 09:44:42,444 - ERROR - circuitbreaker_config.circuit_breaker - AnyIO worker thread : Circuit breaker active: Circuit "call_external" OPEN until 2023-09-15 04:15:42.444566 (5 failures, 60 sec remaining) (last_failure: ConnectionError(MaxRetryError("HTTPSConnectionPool(host='jsonplaceholder.typicode.comk', port=443): Max retries exceeded with url: /posts/100 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f25f59294b0>: Failed to establish a new connection: [Errno -2] Name or service not known'))")))
+2023-09-15 10:07:28,803 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-15 10:07:28,816 - INFO - sqlalchemy.engine.Engine - MainThread : SELECT user.id AS user_id, user.username AS user_username, user.email AS user_email, user.hashed_password AS user_hashed_password 
+FROM user 
+WHERE user.username = %(username_1)s 
+ LIMIT %(param_1)s
+2023-09-15 10:07:28,818 - INFO - sqlalchemy.engine.Engine - MainThread : [generated in 0.01090s] {'username_1': 'denil', 'param_1': 1}
+2023-09-15 10:07:29,709 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-09-15 10:07:32,419 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : BEGIN (implicit)
+2023-09-15 10:07:32,420 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : SELECT user.id AS user_id, user.username AS user_username, user.email AS user_email, user.hashed_password AS user_hashed_password 
+FROM user 
+WHERE user.username = %(username_1)s 
+ LIMIT %(param_1)s
+2023-09-15 10:07:32,421 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : [cached since 3.614s ago] {'username_1': 'denil', 'param_1': 1}
+2023-09-15 10:07:32,437 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : SELECT product.id AS product_id, product.name AS product_name, product.product_type AS product_product_type, product.price AS product_price 
+FROM product 
+WHERE product.id = %(id_1)s 
+ LIMIT %(param_1)s
+2023-09-15 10:07:32,437 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : [generated in 0.01110s] {'id_1': 1, 'param_1': 1}
+2023-09-15 10:07:32,467 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : SELECT favorite.id AS favorite_id, favorite.user_id AS favorite_user_id, favorite.product_id AS favorite_product_id, favorite.product_name AS favorite_product_name, favorite.product_type AS favorite_product_type, favorite.product_price AS favorite_product_price 
+FROM favorite 
+WHERE %(param_1)s = favorite.product_id
+2023-09-15 10:07:32,467 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : [generated in 0.00411s] {'param_1': 1}
+2023-09-15 10:07:32,664 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : DELETE FROM product WHERE product.id = %(id)s
+2023-09-15 10:07:32,664 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : [generated in 0.00711s] {'id': 1}
+2023-09-15 10:07:32,666 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : COMMIT
+2023-09-15 10:08:56,230 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : SHOW TABLES;
+2023-09-15 10:08:56,231 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : [generated in 0.00085s] {}
+2023-09-15 10:08:56,234 - INFO - metadata_services.fetch_tables - AnyIO worker thread : Successfully retrieved tables from the database
+2023-09-18 09:26:26,284 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : SHOW TABLES;
+2023-09-18 09:26:26,285 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : [generated in 0.00112s] {}
+2023-09-18 09:26:26,288 - INFO - metadata_services.fetch_tables - AnyIO worker thread : Successfully retrieved tables from the database
+2023-09-18 09:26:42,381 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : 
+            SELECT 
+                COLUMN_NAME, 
+                COLUMN_TYPE, 
+                IS_NULLABLE, 
+                COLUMN_DEFAULT, 
+                COLUMN_KEY, 
+                EXTRA, 
+                COLUMN_COMMENT 
+            FROM 
+                information_schema.COLUMNS 
+            WHERE 
+                TABLE_SCHEMA = %(db_name)s 
+                AND TABLE_NAME = %(table_name)s;
+        
+2023-09-18 09:26:42,384 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : [generated in 0.00333s] {'db_name': 'ecommerce', 'table_name': 'favorite'}
+2023-09-18 09:27:12,203 - ERROR - circuitbreaker_config.circuit_breaker - AnyIO worker thread : Circuit breaker active: Circuit "call_external" OPEN until 2023-09-18 03:58:12.203047 (5 failures, 60 sec remaining) (last_failure: ConnectionError(MaxRetryError("HTTPSConnectionPool(host='jsonplaceholder.typicode.comk', port=443): Max retries exceeded with url: /posts/100 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f8417f2ef50>: Failed to establish a new connection: [Errno -2] Name or service not known'))")))
+2023-09-18 09:27:12,850 - ERROR - circuitbreaker_config.circuit_breaker - AnyIO worker thread : Circuit breaker active: Circuit "call_external" OPEN until 2023-09-18 03:58:11.850867 (5 failures, 59 sec remaining) (last_failure: ConnectionError(MaxRetryError("HTTPSConnectionPool(host='jsonplaceholder.typicode.comk', port=443): Max retries exceeded with url: /posts/100 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f8417f2ef50>: Failed to establish a new connection: [Errno -2] Name or service not known'))")))
+2023-09-18 09:27:22,182 - ERROR - circuitbreaker_config.circuit_breaker - AnyIO worker thread : Circuit breaker active: Circuit "call_external" OPEN until 2023-09-18 03:58:12.182203 (5 failures, 50 sec remaining) (last_failure: ConnectionError(MaxRetryError("HTTPSConnectionPool(host='jsonplaceholder.typicode.comk', port=443): Max retries exceeded with url: /posts/100 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f8417f2ef50>: Failed to establish a new connection: [Errno -2] Name or service not known'))")))
+2023-09-18 09:27:28,615 - ERROR - circuitbreaker_config.circuit_breaker - AnyIO worker thread : Circuit breaker active: Circuit "call_external" OPEN until 2023-09-18 03:58:11.615898 (5 failures, 43 sec remaining) (last_failure: ConnectionError(MaxRetryError("HTTPSConnectionPool(host='jsonplaceholder.typicode.comk', port=443): Max retries exceeded with url: /posts/100 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f8417f2ef50>: Failed to establish a new connection: [Errno -2] Name or service not known'))")))
+2023-09-18 09:27:46,760 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : BEGIN (implicit)
+2023-09-18 09:27:46,791 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : SELECT product.id AS product_id, product.name AS product_name, product.product_type AS product_product_type, product.price AS product_price 
+FROM product 
+ LIMIT %(param_1)s, %(param_2)s
+2023-09-18 09:27:46,791 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : [generated in 0.00087s] {'param_1': 0, 'param_2': 10}
+2023-09-18 09:27:46,831 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-09-18 09:42:56,854 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : BEGIN (implicit)
+2023-09-18 09:42:56,855 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : SELECT product.id AS product_id, product.name AS product_name, product.product_type AS product_product_type, product.price AS product_price 
+FROM product 
+ LIMIT %(param_1)s, %(param_2)s
+2023-09-18 09:42:56,857 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : [cached since 910.1s ago] {'param_1': 0, 'param_2': 10}
+2023-09-18 09:42:56,879 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-09-18 09:50:12,911 - ERROR - circuitbreaker_config.circuit_breaker - AnyIO worker thread : Circuit breaker active: Circuit "call_external" OPEN until 2023-09-18 04:21:10.911813 (8 failures, 58 sec remaining) (last_failure: ConnectionError(MaxRetryError("HTTPSConnectionPool(host='jsonplaceholder.typicode.comk', port=443): Max retries exceeded with url: /posts/100 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f8417f2c550>: Failed to establish a new connection: [Errno -2] Name or service not known'))")))
+2023-09-18 09:50:13,485 - ERROR - circuitbreaker_config.circuit_breaker - AnyIO worker thread : Circuit breaker active: Circuit "call_external" OPEN until 2023-09-18 04:21:11.485547 (8 failures, 58 sec remaining) (last_failure: ConnectionError(MaxRetryError("HTTPSConnectionPool(host='jsonplaceholder.typicode.comk', port=443): Max retries exceeded with url: /posts/100 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f8417f2c550>: Failed to establish a new connection: [Errno -2] Name or service not known'))")))
+2023-09-18 09:50:13,893 - ERROR - circuitbreaker_config.circuit_breaker - AnyIO worker thread : Circuit breaker active: Circuit "call_external" OPEN until 2023-09-18 04:21:10.893206 (8 failures, 57 sec remaining) (last_failure: ConnectionError(MaxRetryError("HTTPSConnectionPool(host='jsonplaceholder.typicode.comk', port=443): Max retries exceeded with url: /posts/100 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f8417f2c550>: Failed to establish a new connection: [Errno -2] Name or service not known'))")))
+2023-09-18 10:40:01,417 - INFO - sqlalchemy.engine.Engine - MainThread : SELECT DATABASE()
+2023-09-18 10:40:01,419 - INFO - sqlalchemy.engine.Engine - MainThread : [raw sql] {}
+2023-09-18 10:40:01,425 - INFO - sqlalchemy.engine.Engine - MainThread : SELECT @@sql_mode
+2023-09-18 10:40:01,426 - INFO - sqlalchemy.engine.Engine - MainThread : [raw sql] {}
+2023-09-18 10:40:01,433 - INFO - sqlalchemy.engine.Engine - MainThread : SELECT @@lower_case_table_names
+2023-09-18 10:40:01,434 - INFO - sqlalchemy.engine.Engine - MainThread : [raw sql] {}
+2023-09-18 10:40:01,443 - INFO - sqlalchemy.engine.Engine - MainThread : SHOW FULL TABLES FROM `ecommerce`
+2023-09-18 10:40:01,444 - INFO - sqlalchemy.engine.Engine - MainThread : [raw sql] {}
+2023-09-18 10:40:01,489 - INFO - sqlalchemy.engine.Engine - MainThread : SHOW CREATE TABLE `favorite`
+2023-09-18 10:40:01,491 - INFO - sqlalchemy.engine.Engine - MainThread : [raw sql] {}
+2023-09-18 10:40:01,507 - INFO - sqlalchemy.engine.Engine - MainThread : 
+                    select table_schema, table_name, column_name
+                    from information_schema.columns
+                    where (table_schema, table_name, lower(column_name)) in
+                    ((%(table_data_1_1)s, %(table_data_1_2)s, %(table_data_1_3)s), (%(table_data_2_1)s, %(table_data_2_2)s, %(table_data_2_3)s));
+                
+2023-09-18 10:40:01,509 - INFO - sqlalchemy.engine.Engine - MainThread : [generated in 0.00849s] {'table_data_1_1': 'ecommerce', 'table_data_1_2': 'user', 'table_data_1_3': 'id', 'table_data_2_1': 'ecommerce', 'table_data_2_2': 'product', 'table_data_2_3': 'id'}
+2023-09-18 10:40:01,563 - INFO - sqlalchemy.engine.Engine - MainThread : SHOW CREATE TABLE `user`
+2023-09-18 10:40:01,566 - INFO - sqlalchemy.engine.Engine - MainThread : [raw sql] {}
+2023-09-18 10:40:01,579 - INFO - sqlalchemy.engine.Engine - MainThread : SHOW CREATE TABLE `product`
+2023-09-18 10:40:01,580 - INFO - sqlalchemy.engine.Engine - MainThread : [raw sql] {}
+2023-09-18 10:40:01,595 - INFO - sqlalchemy.engine.Engine - MainThread : SHOW CREATE TABLE `favorite`
+2023-09-18 10:40:01,596 - INFO - sqlalchemy.engine.Engine - MainThread : [raw sql] {}
+2023-09-18 10:40:01,607 - INFO - sqlalchemy.engine.Engine - MainThread : 
+                    select table_schema, table_name, column_name
+                    from information_schema.columns
+                    where (table_schema, table_name, lower(column_name)) in
+                    ((%(table_data_1_1)s, %(table_data_1_2)s, %(table_data_1_3)s), (%(table_data_2_1)s, %(table_data_2_2)s, %(table_data_2_3)s));
+                
+2023-09-18 10:40:01,609 - INFO - sqlalchemy.engine.Engine - MainThread : [cached since 0.1083s ago] {'table_data_1_1': 'ecommerce', 'table_data_1_2': 'user', 'table_data_1_3': 'id', 'table_data_2_1': 'ecommerce', 'table_data_2_2': 'product', 'table_data_2_3': 'id'}
+2023-09-18 10:40:01,649 - INFO - sqlalchemy.engine.Engine - MainThread : SHOW CREATE TABLE `user`
+2023-09-18 10:40:01,649 - INFO - sqlalchemy.engine.Engine - MainThread : [raw sql] {}
+2023-09-18 10:40:01,652 - INFO - sqlalchemy.engine.Engine - MainThread : SHOW CREATE TABLE `product`
+2023-09-18 10:40:01,653 - INFO - sqlalchemy.engine.Engine - MainThread : [raw sql] {}
+2023-09-18 11:14:28,063 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-18 11:14:28,068 - INFO - sqlalchemy.engine.Engine - MainThread : SELECT product.id AS product_id, product.name AS product_name, product.product_type AS product_product_type, product.price AS product_price 
+FROM product 
+WHERE product.name = %(name_1)s 
+ LIMIT %(param_1)s
+2023-09-18 11:14:28,078 - INFO - sqlalchemy.engine.Engine - MainThread : [generated in 0.01288s] {'name_1': 'nike', 'param_1': 1}
+2023-09-18 11:14:28,094 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-09-18 11:14:32,753 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-18 11:14:32,754 - INFO - sqlalchemy.engine.Engine - MainThread : SELECT product.id AS product_id, product.name AS product_name, product.product_type AS product_product_type, product.price AS product_price 
+FROM product 
+WHERE product.name = %(name_1)s 
+ LIMIT %(param_1)s
+2023-09-18 11:14:32,755 - INFO - sqlalchemy.engine.Engine - MainThread : [cached since 4.689s ago] {'name_1': 'niket', 'param_1': 1}
+2023-09-18 11:14:32,757 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-09-18 11:46:23,718 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : SHOW TABLES;
+2023-09-18 11:46:23,718 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : [cached since 8397s ago] {}
+2023-09-18 11:46:23,721 - INFO - metadata_services.fetch_tables - AnyIO worker thread : Successfully retrieved tables from the database
+2023-09-18 17:19:07,860 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : SHOW TABLES;
+2023-09-18 17:19:07,861 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : [generated in 0.00084s] {}
+2023-09-18 17:19:07,864 - INFO - metadata_services.fetch_tables - AnyIO worker thread : Successfully retrieved tables from the database
+2023-09-18 17:26:29,907 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : SHOW TABLES;
+2023-09-18 17:26:29,907 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : [cached since 442s ago] {}
+2023-09-18 17:26:29,910 - INFO - metadata_services.fetch_tables - AnyIO worker thread : Successfully retrieved tables from the database
+2023-09-18 17:26:40,145 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : SHOW TABLES;
+2023-09-18 17:26:40,148 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : [cached since 452.3s ago] {}
+2023-09-18 17:26:40,151 - INFO - metadata_services.fetch_tables - AnyIO worker thread : Successfully retrieved tables from the database
+2023-09-18 17:32:26,068 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-18 17:32:26,097 - INFO - sqlalchemy.engine.Engine - MainThread : SELECT user.id AS user_id, user.username AS user_username, user.email AS user_email, user.hashed_password AS user_hashed_password 
+FROM user 
+WHERE user.username = %(username_1)s 
+ LIMIT %(param_1)s
+2023-09-18 17:32:26,098 - INFO - sqlalchemy.engine.Engine - MainThread : [generated in 0.01508s] {'username_1': 'akhil', 'param_1': 1}
+2023-09-18 17:32:26,667 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-09-18 17:32:42,097 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-18 17:32:42,107 - INFO - sqlalchemy.engine.Engine - MainThread : SELECT user.id AS user_id, user.username AS user_username, user.email AS user_email, user.hashed_password AS user_hashed_password 
+FROM user 
+WHERE user.username = %(username_1)s 
+ LIMIT %(param_1)s
+2023-09-18 17:32:42,112 - INFO - sqlalchemy.engine.Engine - MainThread : [cached since 16.03s ago] {'username_1': 'akhil', 'param_1': 1}
+2023-09-18 17:32:42,549 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-09-18 17:32:53,868 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-18 17:32:53,877 - INFO - sqlalchemy.engine.Engine - MainThread : SELECT user.id AS user_id, user.username AS user_username, user.email AS user_email, user.hashed_password AS user_hashed_password 
+FROM user 
+WHERE user.username = %(username_1)s 
+ LIMIT %(param_1)s
+2023-09-18 17:32:53,881 - INFO - sqlalchemy.engine.Engine - MainThread : [cached since 27.8s ago] {'username_1': 'akhil', 'param_1': 1}
+2023-09-18 17:32:54,448 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-09-18 17:41:12,828 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : BEGIN (implicit)
+2023-09-18 17:41:12,839 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : SELECT product.id AS product_id, product.name AS product_name, product.product_type AS product_product_type, product.price AS product_price 
+FROM product 
+ LIMIT %(param_1)s, %(param_2)s
+2023-09-18 17:41:12,839 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : [generated in 0.00761s] {'param_1': 0, 'param_2': 6}
+2023-09-18 17:41:12,847 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-09-18 17:54:23,920 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : SHOW TABLES;
+2023-09-18 17:54:23,920 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : [generated in 0.00074s] {}
+2023-09-18 17:54:23,924 - INFO - metadata_services.fetch_tables - AnyIO worker thread : Successfully retrieved tables from the database
+2023-09-18 17:54:51,961 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : BEGIN (implicit)
+2023-09-18 17:54:51,965 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : SELECT product.id AS product_id, product.name AS product_name, product.product_type AS product_product_type, product.price AS product_price 
+FROM product 
+ LIMIT %(param_1)s, %(param_2)s
+2023-09-18 17:54:51,965 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : [cached since 819.1s ago] {'param_1': 0, 'param_2': 60}
+2023-09-18 17:54:51,972 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-09-18 17:55:13,376 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : SELECT COUNT(*) FROM information_schema.tables WHERE table_schema = %(table_schema)s AND table_name = %(table_name)s
+2023-09-18 17:55:13,378 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : [cached since 914.1s ago] {'table_schema': 'ecommerce', 'table_name': 'favorite'}
+2023-09-18 17:55:13,385 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : BEGIN (implicit)
+2023-09-18 17:55:13,390 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : SHOW CREATE TABLE favorite;
+2023-09-18 17:55:13,390 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : [generated in 0.00390s] {}
+2023-09-18 17:55:13,440 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : SELECT COUNT(*) FROM information_schema.tables WHERE table_schema = %(table_schema)s AND table_name = %(table_name)s
+2023-09-18 17:55:13,441 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : [cached since 914.1s ago] {'table_schema': 'ecommerce', 'table_name': 'user'}
+2023-09-18 17:55:13,447 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : BEGIN (implicit)
+2023-09-18 17:55:13,451 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : SHOW CREATE TABLE user;
+2023-09-18 17:55:13,455 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : [generated in 0.00488s] {}
+2023-09-18 17:55:13,464 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-09-18 17:55:13,473 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : SELECT COUNT(*) FROM information_schema.tables WHERE table_schema = %(table_schema)s AND table_name = %(table_name)s
+2023-09-18 17:55:13,474 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : [cached since 914.2s ago] {'table_schema': 'ecommerce', 'table_name': 'product'}
+2023-09-18 17:55:13,482 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : BEGIN (implicit)
+2023-09-18 17:55:13,485 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : SHOW CREATE TABLE product;
+2023-09-18 17:55:13,486 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : [generated in 0.00354s] {}
+2023-09-18 17:55:13,487 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-09-18 17:55:13,496 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-09-18 18:14:11,437 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : BEGIN (implicit)
+2023-09-18 18:14:11,441 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : SELECT product.id AS product_id, product.name AS product_name, product.product_type AS product_product_type, product.price AS product_price 
+FROM product 
+ LIMIT %(param_1)s, %(param_2)s
+2023-09-18 18:14:11,442 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : [cached since 1979s ago] {'param_1': 0, 'param_2': 60}
+2023-09-18 18:14:11,467 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-09-19 10:07:35,605 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : SHOW TABLES;
+2023-09-19 10:07:35,605 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : [generated in 0.00080s] {}
+2023-09-19 10:07:35,609 - INFO - metadata_services.fetch_tables - AnyIO worker thread : Successfully retrieved tables from the database
+2023-09-19 10:07:53,525 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-19 10:07:53,565 - INFO - sqlalchemy.engine.Engine - MainThread : SELECT user.id AS user_id, user.username AS user_username, user.email AS user_email, user.hashed_password AS user_hashed_password 
+FROM user 
+WHERE user.username = %(username_1)s 
+ LIMIT %(param_1)s
+2023-09-19 10:07:53,566 - INFO - sqlalchemy.engine.Engine - MainThread : [generated in 0.01773s] {'username_1': 'denil', 'param_1': 1}
+2023-09-19 10:07:54,144 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-09-19 10:08:24,827 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-19 10:08:24,862 - INFO - sqlalchemy.engine.Engine - MainThread : SELECT user.id AS user_id, user.username AS user_username, user.email AS user_email, user.hashed_password AS user_hashed_password 
+FROM user 
+WHERE user.username = %(username_1)s 
+ LIMIT %(param_1)s
+2023-09-19 10:08:24,864 - INFO - sqlalchemy.engine.Engine - MainThread : [generated in 0.00509s] {'username_1': 'denil', 'param_1': 1}
+2023-09-19 10:08:25,302 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-09-19 10:30:16,044 - INFO - airflow.configuration - MainThread : Reading the config from /home/user/airflow/airflow.cfg
+2023-09-19 10:30:16,094 - INFO - airflow.settings - MainThread : Configured default timezone Timezone('UTC')
+2023-09-19 10:30:57,344 - INFO - airflow.configuration - MainThread : Reading the config from /home/user/airflow/airflow.cfg
+2023-09-19 10:30:57,405 - INFO - airflow.settings - MainThread : Configured default timezone Timezone('UTC')
+2023-09-19 10:32:07,265 - INFO - airflow.configuration - MainThread : Reading the config from /home/user/airflow/airflow.cfg
+2023-09-19 10:32:07,313 - INFO - airflow.settings - MainThread : Configured default timezone Timezone('UTC')
+2023-09-19 10:33:01,041 - INFO - airflow.configuration - MainThread : Reading the config from /home/user/airflow/airflow.cfg
+2023-09-19 10:33:01,092 - INFO - airflow.settings - MainThread : Configured default timezone Timezone('UTC')
+2023-09-19 10:33:11,386 - INFO - airflow.configuration - MainThread : Reading the config from /home/user/airflow/airflow.cfg
+2023-09-19 10:33:11,437 - INFO - airflow.settings - MainThread : Configured default timezone Timezone('UTC')
+
+
+
+
+
+2023-09-20 13:01:07,233 - INFO - sqlalchemy.engine.Engine - MainThread : SELECT DATABASE()
+2023-09-20 13:01:07,236 - INFO - sqlalchemy.engine.Engine - MainThread : [raw sql] {}
+2023-09-20 13:01:07,245 - INFO - sqlalchemy.engine.Engine - MainThread : SELECT @@sql_mode
+2023-09-20 13:01:07,246 - INFO - sqlalchemy.engine.Engine - MainThread : [raw sql] {}
+2023-09-20 13:01:07,249 - INFO - sqlalchemy.engine.Engine - MainThread : SELECT @@lower_case_table_names
+2023-09-20 13:01:07,250 - INFO - sqlalchemy.engine.Engine - MainThread : [raw sql] {}
+2023-09-20 13:01:07,258 - INFO - sqlalchemy.engine.Engine - MainThread : SHOW FULL TABLES FROM `ecommerce`
+2023-09-20 13:01:07,259 - INFO - sqlalchemy.engine.Engine - MainThread : [raw sql] {}
+2023-09-20 13:01:07,292 - INFO - sqlalchemy.engine.Engine - MainThread : SHOW CREATE TABLE `favorite`
+2023-09-20 13:01:07,293 - INFO - sqlalchemy.engine.Engine - MainThread : [raw sql] {}
+2023-09-20 13:01:07,320 - INFO - sqlalchemy.engine.Engine - MainThread : 
+                    select table_schema, table_name, column_name
+                    from information_schema.columns
+                    where (table_schema, table_name, lower(column_name)) in
+                    ((%(table_data_1_1)s, %(table_data_1_2)s, %(table_data_1_3)s), (%(table_data_2_1)s, %(table_data_2_2)s, %(table_data_2_3)s));
+                
+2023-09-20 13:01:07,320 - INFO - sqlalchemy.engine.Engine - MainThread : [generated in 0.00219s] {'table_data_1_1': 'ecommerce', 'table_data_1_2': 'user', 'table_data_1_3': 'id', 'table_data_2_1': 'ecommerce', 'table_data_2_2': 'product', 'table_data_2_3': 'id'}
+2023-09-20 13:01:07,384 - INFO - sqlalchemy.engine.Engine - MainThread : SHOW CREATE TABLE `user`
+2023-09-20 13:01:07,385 - INFO - sqlalchemy.engine.Engine - MainThread : [raw sql] {}
+2023-09-20 13:01:07,400 - INFO - sqlalchemy.engine.Engine - MainThread : SHOW CREATE TABLE `product`
+2023-09-20 13:01:07,400 - INFO - sqlalchemy.engine.Engine - MainThread : [raw sql] {}
+2023-09-20 13:01:07,423 - INFO - sqlalchemy.engine.Engine - MainThread : SHOW CREATE TABLE `favorite`
+2023-09-20 13:01:07,423 - INFO - sqlalchemy.engine.Engine - MainThread : [raw sql] {}
+2023-09-20 13:01:07,432 - INFO - sqlalchemy.engine.Engine - MainThread : 
+                    select table_schema, table_name, column_name
+                    from information_schema.columns
+                    where (table_schema, table_name, lower(column_name)) in
+                    ((%(table_data_1_1)s, %(table_data_1_2)s, %(table_data_1_3)s), (%(table_data_2_1)s, %(table_data_2_2)s, %(table_data_2_3)s));
+                
+2023-09-20 13:01:07,433 - INFO - sqlalchemy.engine.Engine - MainThread : [cached since 0.1149s ago] {'table_data_1_1': 'ecommerce', 'table_data_1_2': 'user', 'table_data_1_3': 'id', 'table_data_2_1': 'ecommerce', 'table_data_2_2': 'product', 'table_data_2_3': 'id'}
+2023-09-20 13:01:07,464 - INFO - sqlalchemy.engine.Engine - MainThread : SHOW CREATE TABLE `user`
+2023-09-20 13:01:07,469 - INFO - sqlalchemy.engine.Engine - MainThread : [raw sql] {}
+2023-09-20 13:01:07,488 - INFO - sqlalchemy.engine.Engine - MainThread : SHOW CREATE TABLE `product`
+2023-09-20 13:01:07,489 - INFO - sqlalchemy.engine.Engine - MainThread : [raw sql] {}
+2023-09-20 14:01:32,225 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : SHOW TABLES;
+2023-09-20 14:01:32,226 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : [generated in 0.00242s] {}
+2023-09-20 14:01:32,229 - INFO - metadata_services.fetch_tables - AnyIO worker thread : Successfully retrieved tables from the database
+2023-09-20 14:01:40,018 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : SHOW TABLES;
+2023-09-20 14:01:40,019 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : [cached since 7.795s ago] {}
+2023-09-20 14:01:40,022 - INFO - metadata_services.fetch_tables - AnyIO worker thread : Successfully retrieved tables from the database

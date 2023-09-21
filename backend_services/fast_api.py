@@ -30,7 +30,6 @@ class UserCreate(BaseModel):
     hashed_password: str
     
 
-
 ### create a new product
 @router.post("/products/", response_model=ProductResponse,tags=['product'])
 def create_product(user: ProductCreate, db: Session = Depends(get_db),current_user: User = Depends(get_current_user)):
@@ -120,6 +119,12 @@ class FavoriteResponse(BaseModel):
 def get_user_favorite_products(current_user: User = Depends(get_current_user), db: Session = Depends(get_db)):
     favorite_products = db.query(Favorite).filter(Favorite.user_id == current_user.id).all()
     return favorite_products
+
+
+
+
+
+
 
 
 
