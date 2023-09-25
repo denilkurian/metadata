@@ -30,8 +30,7 @@ def call_external():
     try:
         data = resp.json()
         return data
-    except json.JSONDecodeError:
-        
+    except json.JSONDecodeError:        
         return []  
 
 @router.get("/",tags=['circuit breaker'])
@@ -54,12 +53,17 @@ def implement_circuit_breaker():
     }
 
   except requests.exceptions.ConnectionError as e:
+    logger.error(f"Error not found: {e}")
     return {
       "status_code": 500,
       "success": False,
       "message": f"Failed get starwars data: {e}"
     }
   
+
+
+
+
 
 
 

@@ -14,12 +14,9 @@ SECRET_KEY = config('SECRET_KEY')
 ALGORITHM = config('ALGORITHM')
 ACCESS_TOKEN_EXPIRE_MINUTES = config('ACCESS_TOKEN_EXPIRE_MINUTES', cast=int)
 
-
-
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
 
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
-
 
 def is_strong_password(password: str) -> bool:
     # password complexity rules here
@@ -49,6 +46,10 @@ def verify_password(plain_password, hashed_password):
 
 def get_password_hash(password):
     return pwd_context.hash(password)
+
+
+ 
+
 
 
 

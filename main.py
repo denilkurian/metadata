@@ -7,7 +7,7 @@ from logging_service.logs import configure_logging,error_middleware
 ######## router composition in main.py file
 from metadata_services import fetch_tables,metadata_table,fetch_summary,lineage_table,metadata_crawler
 from backend_services import fast_api,caching_redis
-from authentication_authorisation import login_token,registration
+from authentication_authorisation import login_token,registration,verify_otp
 from circuitbreaker_config import circuit_breaker
 
 
@@ -25,6 +25,7 @@ app.include_router(caching_redis.router)
 ####### authentication
 app.include_router(login_token.router)
 app.include_router(registration.router)
+app.include_router(verify_otp.router)
 
 ##### circuit breaker
 app.include_router(circuit_breaker.router)
@@ -46,6 +47,10 @@ async def shutdown_event():
 ####### loading logging function to the main app
 configure_logging() 
 app.middleware("http")(error_middleware)
+
+
+
+
 
 
 

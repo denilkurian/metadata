@@ -7,7 +7,6 @@ from authentication_authorisation.utils import SECRET_KEY,ALGORITHM,jwt
 from database.models import User
 from database.database import get_db
 
-
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
 
 def get_current_user(
@@ -31,6 +30,7 @@ def get_current_user(
     if user is None:
         raise credentials_exception
     return user
+
 
 
 

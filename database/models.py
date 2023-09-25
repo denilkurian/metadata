@@ -1,5 +1,5 @@
 
-from sqlalchemy import Column, Integer, String,ForeignKey
+from sqlalchemy import Column, Integer, String,ForeignKey,DateTime
 from database.database import Base
 from sqlalchemy.orm import relationship 
 
@@ -18,8 +18,11 @@ class Product(Base):
 class User(Base):
     __tablename__ = "user"
     id = Column(Integer, primary_key=True, index=True)
-    username = Column(String(255), unique=True, index=True)
-    email = Column(String(255),unique = True,index = True)
+    first_name = Column(String(255),nullable = False,index = True)
+    last_name = Column(String(255), index = True)
+    date_of_birth = Column(DateTime)
+    sex = Column(String(50))
+    email = Column(String(255),unique = True,index = True,nullable = False)
     hashed_password = Column(String(255))
 
 

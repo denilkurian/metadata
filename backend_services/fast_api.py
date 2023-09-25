@@ -5,7 +5,7 @@ from database.models import Product ,User
 from database.database import engine, Base,get_db
 from typing import List
 from authentication_authorisation.authorisation import get_current_user
-
+from datetime import datetime
 
 Base.metadata.create_all(bind=engine, checkfirst=True)
 
@@ -25,10 +25,17 @@ class ProductResponse(ProductCreate):
 
 
 class UserCreate(BaseModel):
-    username: str
     email : str
     hashed_password: str
-    
+    first_name: str  
+    last_name: str   
+    sex: str         
+
+    class Config:
+        arbitrary_types_allowed = True
+
+    date_of_birth: datetime = None
+
 
 ### create a new product
 @router.post("/products/", response_model=ProductResponse,tags=['product'])
@@ -59,7 +66,6 @@ def update_product(product_id: int, updated_user: ProductCreate, db: Session = D
     db.commit()
     db.refresh(db_user)
     return db_user
-
 
 
 
@@ -119,6 +125,8 @@ class FavoriteResponse(BaseModel):
 def get_user_favorite_products(current_user: User = Depends(get_current_user), db: Session = Depends(get_db)):
     favorite_products = db.query(Favorite).filter(Favorite.user_id == current_user.id).all()
     return favorite_products
+
+
 
 
 
