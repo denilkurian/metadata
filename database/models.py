@@ -2,6 +2,9 @@
 from sqlalchemy import Column, Integer, String,ForeignKey,DateTime
 from database.database import Base
 from sqlalchemy.orm import relationship 
+from sqlalchemy.sql import func
+from datetime import timedelta
+
 
 ### model created for product
 class Product(Base):
@@ -40,8 +43,18 @@ class Favorite(Base):
     product = relationship("Product", back_populates="favorites")
 
 
+########## temporarily saving otp data
+class OTPVerification(Base):
+    __tablename__ = "otp_verification"
 
-
+    id = Column(Integer, primary_key=True, index=True)
+    email = Column(String(50), unique=True, index=True)
+    otp = Column(String(50))
+    expiration = Column(DateTime, default=func.now() + timedelta(minutes=5))
+    first_name = Column(String(50))
+    last_name = Column(String(50))
+    sex = Column(String(50))
+    date_of_birth = Column(DateTime)
 
 
 

@@ -1,17 +1,16 @@
-from fastapi import APIRouter, HTTPException, Query,Depends,Body
+from fastapi import APIRouter, HTTPException,Depends
 from decouple import config
 from email.mime.text import MIMEText
 import smtplib
-from datetime import datetime, timedelta
+from datetime import datetime
 from .utils import get_password_hash
 from database.models import User
 from database.database import get_db
 from sqlalchemy.orm import Session
-from backend_services.fast_api import UserCreate
+
 
 router = APIRouter()
 
-otp_storage = {}
 
 ###### function for details about email sending
 def send_otp_email(recipient_email, otp):
@@ -48,33 +47,53 @@ def send_otp_email(recipient_email, otp):
         print(f"Email sending failed: {e}")
 
 
-########## api for otp verification 
-@router.post("/verify-otp-and-create-account/", tags=['authentication'])
-async def verify_otp_and_create_account(email: str = Query(..., description="User's email address"), otp: str = Query(..., description="OTP received via email"), db: Session = Depends(get_db), user: UserCreate = Body(...)):
+from pydantic import BaseModel
 
 
-    stored_otp_info = otp_storage.get(email)
+# Assuming you have an otp_storage dictionary to store OTP data temporarily.
+otp_storage = {}
 
-    if not stored_otp_info:
-        raise HTTPException(status_code=400, detail="Invalid email or OTP")
+class VerifyOtp(BaseModel):
+    email: str
+    otp: str
 
-    stored_otp = stored_otp_info.get("otp")
-    expiration = stored_otp_info.get("expiration")
 
-    if otp != stored_otp or datetime.utcnow() > expiration:
-        raise HTTPException(status_code=400, detail="Invalid OTP or OTP has expired")
+@router.post("/verify-otp/", tags=['authentication'])
+async def verify_otp_and_create_account(verification_data: VerifyOtp, db: Session = Depends(get_db)):
+    # Check if the OTP exists in storage
+    print("At verify:",otp_storage)
+    stored_verification = otp_storage[verification_data.email]
+    if not stored_verification or datetime.utcnow() > stored_verification['expiration']:
+        raise HTTPException(status_code=400, detail="OTP has expired or is invalid")
 
-    # Create the user account in the database
-    hashed_password = get_password_hash(user.hashed_password)
-    new_user = User(first_name=user.first_name, last_name=user.last_name, sex=user.sex, date_of_birth=user.date_of_birth, hashed_password=hashed_password, email=email)
-    db.add(new_user)
+    # Check if the provided OTP matches the stored OTP
+    if verification_data.otp != stored_verification['otp']:
+        raise HTTPException(status_code=400, detail="Invalid OTP")
+
+    # OTP is valid, create the user account
+    user = User(
+        email=verification_data.email,
+        hashed_password=get_password_hash(stored_verification['hashed_password']),
+        first_name=stored_verification['first_name'],
+        last_name=stored_verification['last_name'],
+        sex=stored_verification['sex'],
+        date_of_birth=stored_verification['date_of_birth']
+    )
+
+    # Add the user to the database
+    db.add(user)
     db.commit()
-    db.refresh(new_user)
 
-    # Remove the verified OTP from storage (optional)
-    del otp_storage[email]
+    # Remove the OTP from storage as it's no longer needed
+    del otp_storage[verification_data.email]
 
-    return {"message": "User account created successfully"}
+    return {"message": "Account created successfully"}
+
+
+
+
+
+
 
 
 

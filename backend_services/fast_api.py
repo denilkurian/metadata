@@ -9,9 +9,7 @@ from datetime import datetime
 
 Base.metadata.create_all(bind=engine, checkfirst=True)
 
-
 router = APIRouter()
-
 
 ####### for validation,serialisation of models
 class ProductCreate(BaseModel):
@@ -22,7 +20,6 @@ class ProductCreate(BaseModel):
 
 class ProductResponse(ProductCreate):
     id: int
-
 
 class UserCreate(BaseModel):
     email : str

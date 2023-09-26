@@ -608,3 +608,804 @@ WHERE user.email = %(email_1)s
  LIMIT %(param_1)s
 2023-09-25 17:12:11,115 - INFO - sqlalchemy.engine.Engine - MainThread : [generated in 0.01540s] {'email_1': 'judycatherine2@gmail.com', 'param_1': 1}
 2023-09-25 17:12:15,160 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-09-25 17:17:26,433 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-25 17:17:26,467 - INFO - sqlalchemy.engine.Engine - MainThread : SELECT user.id AS user_id, user.first_name AS user_first_name, user.last_name AS user_last_name, user.date_of_birth AS user_date_of_birth, user.sex AS user_sex, user.email AS user_email, user.hashed_password AS user_hashed_password 
+FROM user 
+WHERE user.email = %(email_1)s 
+ LIMIT %(param_1)s
+2023-09-25 17:17:26,467 - INFO - sqlalchemy.engine.Engine - MainThread : [generated in 0.00123s] {'email_1': 'judycatherine2@gmail.com', 'param_1': 1}
+2023-09-25 17:17:29,942 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-09-25 17:30:07,487 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-25 17:30:07,531 - INFO - sqlalchemy.engine.Engine - MainThread : SELECT user.id AS user_id, user.first_name AS user_first_name, user.last_name AS user_last_name, user.date_of_birth AS user_date_of_birth, user.sex AS user_sex, user.email AS user_email, user.hashed_password AS user_hashed_password 
+FROM user 
+WHERE user.email = %(email_1)s 
+ LIMIT %(param_1)s
+2023-09-25 17:30:07,535 - INFO - sqlalchemy.engine.Engine - MainThread : [generated in 0.00576s] {'email_1': 'denilkuriancc@gmail.com', 'param_1': 1}
+2023-09-25 17:30:08,163 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-09-25 17:31:05,115 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-25 17:31:05,118 - INFO - sqlalchemy.engine.Engine - MainThread : SELECT user.id AS user_id, user.first_name AS user_first_name, user.last_name AS user_last_name, user.date_of_birth AS user_date_of_birth, user.sex AS user_sex, user.email AS user_email, user.hashed_password AS user_hashed_password 
+FROM user 
+WHERE user.email = %(email_1)s 
+ LIMIT %(param_1)s
+2023-09-25 17:31:05,125 - INFO - sqlalchemy.engine.Engine - MainThread : [cached since 57.6s ago] {'email_1': 'denilkurian@gmail.com', 'param_1': 1}
+2023-09-25 17:31:05,773 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-09-25 17:32:40,249 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-25 17:32:40,260 - INFO - sqlalchemy.engine.Engine - MainThread : SELECT user.id AS user_id, user.first_name AS user_first_name, user.last_name AS user_last_name, user.date_of_birth AS user_date_of_birth, user.sex AS user_sex, user.email AS user_email, user.hashed_password AS user_hashed_password 
+FROM user 
+WHERE user.email = %(email_1)s 
+ LIMIT %(param_1)s
+2023-09-25 17:32:40,260 - INFO - sqlalchemy.engine.Engine - MainThread : [cached since 152.7s ago] {'email_1': 'string', 'param_1': 1}
+2023-09-25 17:32:40,895 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-09-25 17:33:03,101 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-25 17:33:03,102 - INFO - sqlalchemy.engine.Engine - MainThread : SELECT user.id AS user_id, user.first_name AS user_first_name, user.last_name AS user_last_name, user.date_of_birth AS user_date_of_birth, user.sex AS user_sex, user.email AS user_email, user.hashed_password AS user_hashed_password 
+FROM user 
+WHERE user.email = %(email_1)s 
+ LIMIT %(param_1)s
+2023-09-25 17:33:03,103 - INFO - sqlalchemy.engine.Engine - MainThread : [cached since 175.6s ago] {'email_1': 'denilkuriancc@gmail.com', 'param_1': 1}
+2023-09-25 17:33:03,946 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-09-25 17:33:28,756 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-25 17:33:28,758 - INFO - sqlalchemy.engine.Engine - MainThread : SELECT user.id AS user_id, user.first_name AS user_first_name, user.last_name AS user_last_name, user.date_of_birth AS user_date_of_birth, user.sex AS user_sex, user.email AS user_email, user.hashed_password AS user_hashed_password 
+FROM user 
+WHERE user.email = %(email_1)s 
+ LIMIT %(param_1)s
+2023-09-25 17:33:28,761 - INFO - sqlalchemy.engine.Engine - MainThread : [cached since 201.2s ago] {'email_1': 'denilkuriancc', 'param_1': 1}
+2023-09-25 17:33:28,775 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-09-25 17:33:43,532 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-25 17:33:43,547 - INFO - sqlalchemy.engine.Engine - MainThread : SELECT user.id AS user_id, user.first_name AS user_first_name, user.last_name AS user_last_name, user.date_of_birth AS user_date_of_birth, user.sex AS user_sex, user.email AS user_email, user.hashed_password AS user_hashed_password 
+FROM user 
+WHERE user.email = %(email_1)s 
+ LIMIT %(param_1)s
+2023-09-25 17:33:43,550 - INFO - sqlalchemy.engine.Engine - MainThread : [cached since 216s ago] {'email_1': 'string', 'param_1': 1}
+2023-09-25 17:33:44,063 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-09-25 17:40:08,007 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-25 17:40:08,021 - INFO - sqlalchemy.engine.Engine - MainThread : SELECT user.id AS user_id, user.first_name AS user_first_name, user.last_name AS user_last_name, user.date_of_birth AS user_date_of_birth, user.sex AS user_sex, user.email AS user_email, user.hashed_password AS user_hashed_password 
+FROM user 
+WHERE user.email = %(email_1)s 
+ LIMIT %(param_1)s
+2023-09-25 17:40:08,024 - INFO - sqlalchemy.engine.Engine - MainThread : [generated in 0.00403s] {'email_1': 'denilkuriancc@gmail.com', 'param_1': 1}
+2023-09-25 17:40:08,841 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-09-25 17:40:57,612 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-25 17:40:57,615 - INFO - sqlalchemy.engine.Engine - MainThread : SELECT user.id AS user_id, user.first_name AS user_first_name, user.last_name AS user_last_name, user.date_of_birth AS user_date_of_birth, user.sex AS user_sex, user.email AS user_email, user.hashed_password AS user_hashed_password 
+FROM user 
+WHERE user.email = %(email_1)s 
+ LIMIT %(param_1)s
+2023-09-25 17:40:57,617 - INFO - sqlalchemy.engine.Engine - MainThread : [cached since 49.6s ago] {'email_1': 'string', 'param_1': 1}
+2023-09-25 17:40:57,985 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-09-25 17:41:16,182 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-25 17:41:16,198 - INFO - sqlalchemy.engine.Engine - MainThread : SELECT user.id AS user_id, user.first_name AS user_first_name, user.last_name AS user_last_name, user.date_of_birth AS user_date_of_birth, user.sex AS user_sex, user.email AS user_email, user.hashed_password AS user_hashed_password 
+FROM user 
+WHERE user.email = %(email_1)s 
+ LIMIT %(param_1)s
+2023-09-25 17:41:16,199 - INFO - sqlalchemy.engine.Engine - MainThread : [cached since 68.18s ago] {'email_1': 'denilkurian@gmail.com', 'param_1': 1}
+2023-09-25 17:41:16,583 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-09-25 17:44:27,489 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-25 17:44:27,508 - INFO - sqlalchemy.engine.Engine - MainThread : SELECT user.id AS user_id, user.first_name AS user_first_name, user.last_name AS user_last_name, user.date_of_birth AS user_date_of_birth, user.sex AS user_sex, user.email AS user_email, user.hashed_password AS user_hashed_password 
+FROM user 
+WHERE user.email = %(email_1)s 
+ LIMIT %(param_1)s
+2023-09-25 17:44:27,512 - INFO - sqlalchemy.engine.Engine - MainThread : [generated in 0.00683s] {'email_1': 'denilkurian@gmail.com', 'param_1': 1}
+2023-09-25 17:44:31,151 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-09-25 17:45:31,137 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-25 17:45:31,141 - INFO - sqlalchemy.engine.Engine - MainThread : INSERT INTO user (first_name, last_name, date_of_birth, sex, email, hashed_password) VALUES (%(first_name)s, %(last_name)s, %(date_of_birth)s, %(sex)s, %(email)s, %(hashed_password)s)
+2023-09-25 17:45:31,144 - INFO - sqlalchemy.engine.Engine - MainThread : [generated in 0.00332s] {'first_name': 'string', 'last_name': 'string', 'date_of_birth': datetime.datetime(2023, 9, 25, 12, 14, 59, 956000, tzinfo=TzInfo(UTC)), 'sex': 'string', 'email': 'denilkurian@gmail.com', 'hashed_password': '$2b$12$b2rSV2u5roTOL4nDfTxKu.ncytGSKVv0ga4/140.Ydaqmow8fZYjK'}
+2023-09-25 17:45:31,147 - INFO - sqlalchemy.engine.Engine - MainThread : COMMIT
+2023-09-25 17:45:31,156 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-25 17:45:31,162 - INFO - sqlalchemy.engine.Engine - MainThread : SELECT user.id, user.first_name, user.last_name, user.date_of_birth, user.sex, user.email, user.hashed_password 
+FROM user 
+WHERE user.id = %(pk_1)s
+2023-09-25 17:45:31,164 - INFO - sqlalchemy.engine.Engine - MainThread : [generated in 0.00272s] {'pk_1': 1}
+2023-09-25 17:45:31,171 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-09-25 17:46:12,328 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-25 17:46:12,341 - INFO - sqlalchemy.engine.Engine - MainThread : SELECT user.id AS user_id, user.first_name AS user_first_name, user.last_name AS user_last_name, user.date_of_birth AS user_date_of_birth, user.sex AS user_sex, user.email AS user_email, user.hashed_password AS user_hashed_password 
+FROM user 
+WHERE user.email = %(email_1)s 
+ LIMIT %(param_1)s
+2023-09-25 17:46:12,343 - INFO - sqlalchemy.engine.Engine - MainThread : [cached since 104.8s ago] {'email_1': 'denilkurian@gmail.com', 'param_1': 1}
+2023-09-25 17:46:12,940 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-09-25 17:58:03,500 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-25 17:58:03,543 - INFO - sqlalchemy.engine.Engine - MainThread : SELECT user.id AS user_id, user.first_name AS user_first_name, user.last_name AS user_last_name, user.date_of_birth AS user_date_of_birth, user.sex AS user_sex, user.email AS user_email, user.hashed_password AS user_hashed_password 
+FROM user 
+WHERE user.email = %(email_1)s 
+ LIMIT %(param_1)s
+2023-09-25 17:58:03,544 - INFO - sqlalchemy.engine.Engine - MainThread : [generated in 0.00097s] {'email_1': 'denilkurian@gmail.com', 'param_1': 1}
+2023-09-25 17:58:04,283 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-09-25 17:58:16,890 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-25 17:58:16,892 - INFO - sqlalchemy.engine.Engine - MainThread : SELECT user.id AS user_id, user.first_name AS user_first_name, user.last_name AS user_last_name, user.date_of_birth AS user_date_of_birth, user.sex AS user_sex, user.email AS user_email, user.hashed_password AS user_hashed_password 
+FROM user 
+WHERE user.email = %(email_1)s 
+ LIMIT %(param_1)s
+2023-09-25 17:58:16,894 - INFO - sqlalchemy.engine.Engine - MainThread : [cached since 13.35s ago] {'email_1': 'denilkuriancc@gmail.com', 'param_1': 1}
+2023-09-25 17:58:16,912 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-09-25 18:05:25,632 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-25 18:05:25,649 - INFO - sqlalchemy.engine.Engine - MainThread : SELECT user.id AS user_id, user.first_name AS user_first_name, user.last_name AS user_last_name, user.date_of_birth AS user_date_of_birth, user.sex AS user_sex, user.email AS user_email, user.hashed_password AS user_hashed_password 
+FROM user 
+WHERE user.email = %(email_1)s 
+ LIMIT %(param_1)s
+2023-09-25 18:05:25,653 - INFO - sqlalchemy.engine.Engine - MainThread : [generated in 0.00454s] {'email_1': 'denilkuriancc@gmail.com', 'param_1': 1}
+2023-09-25 18:05:25,659 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-09-25 18:10:47,924 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-25 18:10:47,966 - INFO - sqlalchemy.engine.Engine - MainThread : SELECT user.id AS user_id, user.first_name AS user_first_name, user.last_name AS user_last_name, user.date_of_birth AS user_date_of_birth, user.sex AS user_sex, user.email AS user_email, user.hashed_password AS user_hashed_password 
+FROM user 
+WHERE user.email = %(email_1)s 
+ LIMIT %(param_1)s
+2023-09-25 18:10:47,967 - INFO - sqlalchemy.engine.Engine - MainThread : [generated in 0.00547s] {'email_1': 'denilkurian@gmail.com', 'param_1': 1}
+2023-09-25 18:10:48,433 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-09-25 18:16:21,121 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-25 18:16:21,148 - INFO - sqlalchemy.engine.Engine - MainThread : SELECT user.id AS user_id, user.first_name AS user_first_name, user.last_name AS user_last_name, user.date_of_birth AS user_date_of_birth, user.sex AS user_sex, user.email AS user_email, user.hashed_password AS user_hashed_password 
+FROM user 
+WHERE user.email = %(email_1)s 
+ LIMIT %(param_1)s
+2023-09-25 18:16:21,149 - INFO - sqlalchemy.engine.Engine - MainThread : [generated in 0.00969s] {'email_1': 'string', 'param_1': 1}
+2023-09-25 18:16:21,155 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-09-25 18:20:48,330 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-25 18:20:48,344 - INFO - sqlalchemy.engine.Engine - MainThread : SELECT user.id AS user_id, user.first_name AS user_first_name, user.last_name AS user_last_name, user.date_of_birth AS user_date_of_birth, user.sex AS user_sex, user.email AS user_email, user.hashed_password AS user_hashed_password 
+FROM user 
+WHERE user.email = %(email_1)s 
+ LIMIT %(param_1)s
+2023-09-25 18:20:48,345 - INFO - sqlalchemy.engine.Engine - MainThread : [generated in 0.00112s] {'email_1': 'denilkurian@gmail.com', 'param_1': 1}
+2023-09-25 18:20:49,746 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-09-26 09:16:45,501 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-26 09:16:45,545 - INFO - sqlalchemy.engine.Engine - MainThread : SELECT user.id AS user_id, user.first_name AS user_first_name, user.last_name AS user_last_name, user.date_of_birth AS user_date_of_birth, user.sex AS user_sex, user.email AS user_email, user.hashed_password AS user_hashed_password 
+FROM user 
+WHERE user.email = %(email_1)s 
+ LIMIT %(param_1)s
+2023-09-26 09:16:45,545 - INFO - sqlalchemy.engine.Engine - MainThread : [generated in 0.00677s] {'email_1': 'denilkurian@gmail.com', 'param_1': 1}
+2023-09-26 09:16:46,998 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-09-26 09:30:50,346 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-26 09:30:50,371 - INFO - sqlalchemy.engine.Engine - MainThread : SELECT user.id AS user_id, user.first_name AS user_first_name, user.last_name AS user_last_name, user.date_of_birth AS user_date_of_birth, user.sex AS user_sex, user.email AS user_email, user.hashed_password AS user_hashed_password 
+FROM user 
+WHERE user.email = %(email_1)s 
+ LIMIT %(param_1)s
+2023-09-26 09:30:50,371 - INFO - sqlalchemy.engine.Engine - MainThread : [generated in 0.00123s] {'email_1': 'denilkurian@gmail.com', 'param_1': 1}
+2023-09-26 09:30:51,531 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-09-26 09:32:03,209 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-26 09:32:03,235 - INFO - sqlalchemy.engine.Engine - MainThread : SELECT user.id AS user_id, user.first_name AS user_first_name, user.last_name AS user_last_name, user.date_of_birth AS user_date_of_birth, user.sex AS user_sex, user.email AS user_email, user.hashed_password AS user_hashed_password 
+FROM user 
+WHERE user.email = %(email_1)s 
+ LIMIT %(param_1)s
+2023-09-26 09:32:03,236 - INFO - sqlalchemy.engine.Engine - MainThread : [generated in 0.00101s] {'email_1': 'denilkurian@gmail.com', 'param_1': 1}
+2023-09-26 09:32:04,312 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-09-26 09:44:33,768 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-26 09:44:33,785 - INFO - sqlalchemy.engine.Engine - MainThread : SELECT user.id AS user_id, user.first_name AS user_first_name, user.last_name AS user_last_name, user.date_of_birth AS user_date_of_birth, user.sex AS user_sex, user.email AS user_email, user.hashed_password AS user_hashed_password 
+FROM user 
+WHERE user.email = %(email_1)s 
+ LIMIT %(param_1)s
+2023-09-26 09:44:33,786 - INFO - sqlalchemy.engine.Engine - MainThread : [generated in 0.00342s] {'email_1': 'denilkurian@gmail.com', 'param_1': 1}
+2023-09-26 09:44:34,545 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-09-26 09:44:43,645 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-26 09:44:43,647 - INFO - sqlalchemy.engine.Engine - MainThread : SELECT user.id AS user_id, user.first_name AS user_first_name, user.last_name AS user_last_name, user.date_of_birth AS user_date_of_birth, user.sex AS user_sex, user.email AS user_email, user.hashed_password AS user_hashed_password 
+FROM user 
+WHERE user.email = %(email_1)s 
+ LIMIT %(param_1)s
+2023-09-26 09:44:43,657 - INFO - sqlalchemy.engine.Engine - MainThread : [cached since 9.874s ago] {'email_1': 'denilkuriancc@gmail.com', 'param_1': 1}
+2023-09-26 09:44:43,665 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-09-26 09:44:51,501 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-26 09:44:51,508 - INFO - sqlalchemy.engine.Engine - MainThread : SELECT user.id AS user_id, user.first_name AS user_first_name, user.last_name AS user_last_name, user.date_of_birth AS user_date_of_birth, user.sex AS user_sex, user.email AS user_email, user.hashed_password AS user_hashed_password 
+FROM user 
+WHERE user.email = %(email_1)s 
+ LIMIT %(param_1)s
+2023-09-26 09:44:51,516 - INFO - sqlalchemy.engine.Engine - MainThread : [cached since 17.73s ago] {'email_1': 'denilkurian@gmail.com', 'param_1': 1}
+2023-09-26 09:44:52,396 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-09-26 09:45:17,839 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-26 09:45:17,848 - INFO - sqlalchemy.engine.Engine - MainThread : SELECT user.id AS user_id, user.first_name AS user_first_name, user.last_name AS user_last_name, user.date_of_birth AS user_date_of_birth, user.sex AS user_sex, user.email AS user_email, user.hashed_password AS user_hashed_password 
+FROM user 
+WHERE user.email = %(email_1)s 
+ LIMIT %(param_1)s
+2023-09-26 09:45:17,849 - INFO - sqlalchemy.engine.Engine - MainThread : [generated in 0.00296s] {'email_1': 'denilkurian@gmail.com', 'param_1': 1}
+2023-09-26 09:45:18,668 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-09-26 09:45:30,684 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-26 09:45:30,690 - INFO - sqlalchemy.engine.Engine - MainThread : SELECT user.id AS user_id, user.first_name AS user_first_name, user.last_name AS user_last_name, user.date_of_birth AS user_date_of_birth, user.sex AS user_sex, user.email AS user_email, user.hashed_password AS user_hashed_password 
+FROM user 
+WHERE user.email = %(email_1)s 
+ LIMIT %(param_1)s
+2023-09-26 09:45:30,690 - INFO - sqlalchemy.engine.Engine - MainThread : [cached since 12.84s ago] {'email_1': 'denilkuriancc@gmail.com', 'param_1': 1}
+2023-09-26 09:45:30,696 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-09-26 09:50:45,271 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-26 09:50:45,277 - INFO - sqlalchemy.engine.Engine - MainThread : SELECT user.id AS user_id, user.first_name AS user_first_name, user.last_name AS user_last_name, user.date_of_birth AS user_date_of_birth, user.sex AS user_sex, user.email AS user_email, user.hashed_password AS user_hashed_password 
+FROM user 
+WHERE user.email = %(email_1)s 
+ LIMIT %(param_1)s
+2023-09-26 09:50:45,278 - INFO - sqlalchemy.engine.Engine - MainThread : [generated in 0.00132s] {'email_1': 'denilkuriancc@gmail.com', 'param_1': 1}
+2023-09-26 09:50:45,290 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-09-26 09:50:51,941 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-26 09:50:51,948 - INFO - sqlalchemy.engine.Engine - MainThread : SELECT user.id AS user_id, user.first_name AS user_first_name, user.last_name AS user_last_name, user.date_of_birth AS user_date_of_birth, user.sex AS user_sex, user.email AS user_email, user.hashed_password AS user_hashed_password 
+FROM user 
+WHERE user.email = %(email_1)s 
+ LIMIT %(param_1)s
+2023-09-26 09:50:51,957 - INFO - sqlalchemy.engine.Engine - MainThread : [cached since 6.68s ago] {'email_1': 'denilkurian@gmail.com', 'param_1': 1}
+2023-09-26 09:50:52,533 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-09-26 09:52:50,077 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-26 09:52:50,087 - INFO - sqlalchemy.engine.Engine - MainThread : SELECT user.id AS user_id, user.first_name AS user_first_name, user.last_name AS user_last_name, user.date_of_birth AS user_date_of_birth, user.sex AS user_sex, user.email AS user_email, user.hashed_password AS user_hashed_password 
+FROM user 
+WHERE user.email = %(email_1)s 
+ LIMIT %(param_1)s
+2023-09-26 09:52:50,089 - INFO - sqlalchemy.engine.Engine - MainThread : [generated in 0.00256s] {'email_1': 'denilkurian@gmail.com', 'param_1': 1}
+2023-09-26 09:52:50,092 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-09-26 09:58:18,507 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-26 09:58:18,530 - INFO - sqlalchemy.engine.Engine - MainThread : SELECT user.id AS user_id, user.first_name AS user_first_name, user.last_name AS user_last_name, user.date_of_birth AS user_date_of_birth, user.sex AS user_sex, user.email AS user_email, user.hashed_password AS user_hashed_password 
+FROM user 
+WHERE user.email = %(email_1)s AND user.hashed_password = %(hashed_password_1)s 
+ LIMIT %(param_1)s
+2023-09-26 09:58:18,534 - INFO - sqlalchemy.engine.Engine - MainThread : [generated in 0.01008s] {'email_1': 'denilkurian@gmail.com', 'hashed_password_1': '$2b$12$3bVyritN8CMu9EI3bU6KDeAUHyJFK499IpQ8bFD/UdMD.tvaNVQmm', 'param_1': 1}
+2023-09-26 09:58:18,545 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-09-26 10:04:14,728 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-26 10:04:14,757 - INFO - sqlalchemy.engine.Engine - MainThread : SELECT user.id AS user_id, user.first_name AS user_first_name, user.last_name AS user_last_name, user.date_of_birth AS user_date_of_birth, user.sex AS user_sex, user.email AS user_email, user.hashed_password AS user_hashed_password 
+FROM user 
+WHERE user.email = %(email_1)s 
+ LIMIT %(param_1)s
+2023-09-26 10:04:14,759 - INFO - sqlalchemy.engine.Engine - MainThread : [generated in 0.01333s] {'email_1': 'denilkuriancc@gmail.com', 'param_1': 1}
+2023-09-26 10:04:14,768 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-09-26 10:04:21,274 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-26 10:04:21,293 - INFO - sqlalchemy.engine.Engine - MainThread : SELECT user.id AS user_id, user.first_name AS user_first_name, user.last_name AS user_last_name, user.date_of_birth AS user_date_of_birth, user.sex AS user_sex, user.email AS user_email, user.hashed_password AS user_hashed_password 
+FROM user 
+WHERE user.email = %(email_1)s 
+ LIMIT %(param_1)s
+2023-09-26 10:04:21,294 - INFO - sqlalchemy.engine.Engine - MainThread : [cached since 6.548s ago] {'email_1': 'denilkurian@gmail.com', 'param_1': 1}
+2023-09-26 10:04:21,296 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-09-26 10:15:21,804 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-26 10:15:21,828 - INFO - sqlalchemy.engine.Engine - MainThread : SELECT user.id AS user_id, user.first_name AS user_first_name, user.last_name AS user_last_name, user.date_of_birth AS user_date_of_birth, user.sex AS user_sex, user.email AS user_email, user.hashed_password AS user_hashed_password 
+FROM user 
+WHERE user.email = %(email_1)s 
+ LIMIT %(param_1)s
+2023-09-26 10:15:21,829 - INFO - sqlalchemy.engine.Engine - MainThread : [generated in 0.00112s] {'email_1': 'denilkurian@gmail.com', 'param_1': 1}
+2023-09-26 10:15:21,832 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-09-26 10:15:28,008 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-26 10:15:28,013 - INFO - sqlalchemy.engine.Engine - MainThread : SELECT user.id AS user_id, user.first_name AS user_first_name, user.last_name AS user_last_name, user.date_of_birth AS user_date_of_birth, user.sex AS user_sex, user.email AS user_email, user.hashed_password AS user_hashed_password 
+FROM user 
+WHERE user.email = %(email_1)s 
+ LIMIT %(param_1)s
+2023-09-26 10:15:28,013 - INFO - sqlalchemy.engine.Engine - MainThread : [cached since 6.186s ago] {'email_1': 'denilkuriancc@gmail.com', 'param_1': 1}
+2023-09-26 10:15:31,825 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-09-26 10:16:34,368 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-26 10:16:34,372 - INFO - sqlalchemy.engine.Engine - MainThread : INSERT INTO user (first_name, last_name, date_of_birth, sex, email, hashed_password) VALUES (%(first_name)s, %(last_name)s, %(date_of_birth)s, %(sex)s, %(email)s, %(hashed_password)s)
+2023-09-26 10:16:34,375 - INFO - sqlalchemy.engine.Engine - MainThread : [generated in 0.00380s] {'first_name': None, 'last_name': None, 'date_of_birth': None, 'sex': None, 'email': 'denilkuriancc@gmail.com', 'hashed_password': None}
+2023-09-26 10:16:34,382 - INFO - sqlalchemy.engine.Engine - MainThread : ROLLBACK
+2023-09-26 10:16:34,385 - ERROR - root - MainThread : An error occurred while processing request: (mysql.connector.errors.IntegrityError) 1048 (23000): Column 'first_name' cannot be null
+[SQL: INSERT INTO user (first_name, last_name, date_of_birth, sex, email, hashed_password) VALUES (%(first_name)s, %(last_name)s, %(date_of_birth)s, %(sex)s, %(email)s, %(hashed_password)s)]
+[parameters: {'first_name': None, 'last_name': None, 'date_of_birth': None, 'sex': None, 'email': 'denilkuriancc@gmail.com', 'hashed_password': None}]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+2023-09-26 10:20:29,580 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-26 10:20:29,634 - INFO - sqlalchemy.engine.Engine - MainThread : SELECT user.id AS user_id, user.first_name AS user_first_name, user.last_name AS user_last_name, user.date_of_birth AS user_date_of_birth, user.sex AS user_sex, user.email AS user_email, user.hashed_password AS user_hashed_password 
+FROM user 
+WHERE user.email = %(email_1)s 
+ LIMIT %(param_1)s
+2023-09-26 10:20:29,634 - INFO - sqlalchemy.engine.Engine - MainThread : [generated in 0.00123s] {'email_1': 'denilkuriancc@gmail.com', 'param_1': 1}
+2023-09-26 10:20:33,235 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-09-26 10:22:04,212 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-26 10:22:04,224 - INFO - sqlalchemy.engine.Engine - MainThread : INSERT INTO user (first_name, last_name, date_of_birth, sex, email, hashed_password) VALUES (%(first_name)s, %(last_name)s, %(date_of_birth)s, %(sex)s, %(email)s, %(hashed_password)s)
+2023-09-26 10:22:04,224 - INFO - sqlalchemy.engine.Engine - MainThread : [generated in 0.00101s] {'first_name': 'string', 'last_name': 'string', 'date_of_birth': datetime.datetime(2023, 9, 26, 4, 50, 55, 860000, tzinfo=TzInfo(UTC)), 'sex': 'string', 'email': 'denilkuriancc@gmail.com', 'hashed_password': '$2b$12$8TSVZynIWMchsJsL6uXCB.FCYOwNjD8xcWl2Thwl89M5hrMtvMCaG'}
+2023-09-26 10:22:04,227 - INFO - sqlalchemy.engine.Engine - MainThread : COMMIT
+2023-09-26 10:22:04,234 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-26 10:22:04,238 - INFO - sqlalchemy.engine.Engine - MainThread : SELECT user.id, user.first_name, user.last_name, user.date_of_birth, user.sex, user.email, user.hashed_password 
+FROM user 
+WHERE user.id = %(pk_1)s
+2023-09-26 10:22:04,240 - INFO - sqlalchemy.engine.Engine - MainThread : [generated in 0.00277s] {'pk_1': 2}
+2023-09-26 10:22:04,249 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-09-26 10:22:38,827 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-26 10:22:38,828 - INFO - sqlalchemy.engine.Engine - MainThread : SELECT user.id AS user_id, user.first_name AS user_first_name, user.last_name AS user_last_name, user.date_of_birth AS user_date_of_birth, user.sex AS user_sex, user.email AS user_email, user.hashed_password AS user_hashed_password 
+FROM user 
+WHERE user.email = %(email_1)s 
+ LIMIT %(param_1)s
+2023-09-26 10:22:38,833 - INFO - sqlalchemy.engine.Engine - MainThread : [cached since 129.2s ago] {'email_1': 'denilkuriancc@gmail.com', 'param_1': 1}
+2023-09-26 10:22:38,836 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-09-26 10:25:57,843 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-26 10:25:57,852 - INFO - sqlalchemy.engine.Engine - MainThread : SELECT user.id AS user_id, user.first_name AS user_first_name, user.last_name AS user_last_name, user.date_of_birth AS user_date_of_birth, user.sex AS user_sex, user.email AS user_email, user.hashed_password AS user_hashed_password 
+FROM user 
+WHERE user.email = %(email_1)s 
+ LIMIT %(param_1)s
+2023-09-26 10:25:57,853 - INFO - sqlalchemy.engine.Engine - MainThread : [generated in 0.00426s] {'email_1': 'denilkuriancc@gmail.com', 'param_1': 1}
+2023-09-26 10:25:58,412 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-09-26 10:26:52,631 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-26 10:26:52,633 - INFO - sqlalchemy.engine.Engine - MainThread : SELECT user.id AS user_id, user.first_name AS user_first_name, user.last_name AS user_last_name, user.date_of_birth AS user_date_of_birth, user.sex AS user_sex, user.email AS user_email, user.hashed_password AS user_hashed_password 
+FROM user 
+WHERE user.email = %(email_1)s 
+ LIMIT %(param_1)s
+2023-09-26 10:26:52,641 - INFO - sqlalchemy.engine.Engine - MainThread : [cached since 54.79s ago] {'email_1': 'denilkuriancc@gmail.com', 'param_1': 1}
+2023-09-26 10:26:53,347 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-09-26 10:27:00,872 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-26 10:27:00,874 - INFO - sqlalchemy.engine.Engine - MainThread : SELECT user.id AS user_id, user.first_name AS user_first_name, user.last_name AS user_last_name, user.date_of_birth AS user_date_of_birth, user.sex AS user_sex, user.email AS user_email, user.hashed_password AS user_hashed_password 
+FROM user 
+WHERE user.email = %(email_1)s 
+ LIMIT %(param_1)s
+2023-09-26 10:27:00,876 - INFO - sqlalchemy.engine.Engine - MainThread : [cached since 63.03s ago] {'email_1': 'denilkuriancc@gmail.com', 'param_1': 1}
+2023-09-26 10:27:01,430 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-09-26 10:27:13,151 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-26 10:27:13,157 - INFO - sqlalchemy.engine.Engine - MainThread : SELECT user.id AS user_id, user.first_name AS user_first_name, user.last_name AS user_last_name, user.date_of_birth AS user_date_of_birth, user.sex AS user_sex, user.email AS user_email, user.hashed_password AS user_hashed_password 
+FROM user 
+WHERE user.email = %(email_1)s 
+ LIMIT %(param_1)s
+2023-09-26 10:27:13,158 - INFO - sqlalchemy.engine.Engine - MainThread : [cached since 75.31s ago] {'email_1': 'denilkurian@gmail.com', 'param_1': 1}
+2023-09-26 10:27:13,531 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-09-26 10:27:21,797 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-26 10:27:21,806 - INFO - sqlalchemy.engine.Engine - MainThread : SELECT user.id AS user_id, user.first_name AS user_first_name, user.last_name AS user_last_name, user.date_of_birth AS user_date_of_birth, user.sex AS user_sex, user.email AS user_email, user.hashed_password AS user_hashed_password 
+FROM user 
+WHERE user.email = %(email_1)s 
+ LIMIT %(param_1)s
+2023-09-26 10:27:21,808 - INFO - sqlalchemy.engine.Engine - MainThread : [cached since 83.96s ago] {'email_1': 'denilkuriancc@gmail.com', 'param_1': 1}
+2023-09-26 10:27:22,457 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-09-26 10:56:41,733 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-26 10:56:41,754 - INFO - sqlalchemy.engine.Engine - MainThread : SELECT user.id AS user_id, user.first_name AS user_first_name, user.last_name AS user_last_name, user.date_of_birth AS user_date_of_birth, user.sex AS user_sex, user.email AS user_email, user.hashed_password AS user_hashed_password 
+FROM user 
+WHERE user.email = %(email_1)s 
+ LIMIT %(param_1)s
+2023-09-26 10:56:41,754 - INFO - sqlalchemy.engine.Engine - MainThread : [generated in 0.01719s] {'email_1': 'denilkurian@gmail.com', 'param_1': 1}
+2023-09-26 10:56:41,757 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-09-26 10:56:41,765 - ERROR - root - MainThread : An error occurred while processing request: 'UserCreate' object has no attribute 'password'
+2023-09-26 10:57:21,920 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-26 10:57:21,942 - INFO - sqlalchemy.engine.Engine - MainThread : SELECT user.id AS user_id, user.first_name AS user_first_name, user.last_name AS user_last_name, user.date_of_birth AS user_date_of_birth, user.sex AS user_sex, user.email AS user_email, user.hashed_password AS user_hashed_password 
+FROM user 
+WHERE user.email = %(email_1)s 
+ LIMIT %(param_1)s
+2023-09-26 10:57:21,944 - INFO - sqlalchemy.engine.Engine - MainThread : [generated in 0.00307s] {'email_1': 'denilkurian@gmail.com', 'param_1': 1}
+2023-09-26 10:57:21,953 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-09-26 10:57:42,557 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-26 10:57:42,560 - INFO - sqlalchemy.engine.Engine - MainThread : SELECT user.id AS user_id, user.first_name AS user_first_name, user.last_name AS user_last_name, user.date_of_birth AS user_date_of_birth, user.sex AS user_sex, user.email AS user_email, user.hashed_password AS user_hashed_password 
+FROM user 
+WHERE user.email = %(email_1)s 
+ LIMIT %(param_1)s
+2023-09-26 10:57:42,562 - INFO - sqlalchemy.engine.Engine - MainThread : [cached since 20.62s ago] {'email_1': 'denilkurian@gmail.com', 'param_1': 1}
+2023-09-26 10:57:42,573 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-09-26 10:57:48,783 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-26 10:57:48,789 - INFO - sqlalchemy.engine.Engine - MainThread : SELECT user.id AS user_id, user.first_name AS user_first_name, user.last_name AS user_last_name, user.date_of_birth AS user_date_of_birth, user.sex AS user_sex, user.email AS user_email, user.hashed_password AS user_hashed_password 
+FROM user 
+WHERE user.email = %(email_1)s 
+ LIMIT %(param_1)s
+2023-09-26 10:57:48,789 - INFO - sqlalchemy.engine.Engine - MainThread : [cached since 26.85s ago] {'email_1': 'denilkurian@gmail.com', 'param_1': 1}
+2023-09-26 10:57:52,217 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-09-26 11:01:53,202 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-26 11:01:53,208 - INFO - sqlalchemy.engine.Engine - MainThread : SELECT user.id AS user_id, user.first_name AS user_first_name, user.last_name AS user_last_name, user.date_of_birth AS user_date_of_birth, user.sex AS user_sex, user.email AS user_email, user.hashed_password AS user_hashed_password 
+FROM user 
+WHERE user.email = %(email_1)s 
+ LIMIT %(param_1)s
+2023-09-26 11:01:53,208 - INFO - sqlalchemy.engine.Engine - MainThread : [generated in 0.00118s] {'email_1': 'denilkurian@gmail.com', 'param_1': 1}
+2023-09-26 11:01:56,604 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-09-26 11:12:02,787 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-26 11:12:02,801 - INFO - sqlalchemy.engine.Engine - MainThread : SELECT user.id AS user_id, user.first_name AS user_first_name, user.last_name AS user_last_name, user.date_of_birth AS user_date_of_birth, user.sex AS user_sex, user.email AS user_email, user.hashed_password AS user_hashed_password 
+FROM user 
+WHERE user.email = %(email_1)s 
+ LIMIT %(param_1)s
+2023-09-26 11:12:02,806 - INFO - sqlalchemy.engine.Engine - MainThread : [generated in 0.00576s] {'email_1': 'denilkurian@gmail.com', 'param_1': 1}
+2023-09-26 11:12:06,212 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-09-26 11:16:56,902 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-26 11:16:56,932 - INFO - sqlalchemy.engine.Engine - MainThread : SELECT user.id AS user_id, user.first_name AS user_first_name, user.last_name AS user_last_name, user.date_of_birth AS user_date_of_birth, user.sex AS user_sex, user.email AS user_email, user.hashed_password AS user_hashed_password 
+FROM user 
+WHERE user.email = %(email_1)s 
+ LIMIT %(param_1)s
+2023-09-26 11:16:56,932 - INFO - sqlalchemy.engine.Engine - MainThread : [generated in 0.02495s] {'email_1': 'denilkurian@gmail.com', 'param_1': 1}
+2023-09-26 11:17:00,366 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-09-26 11:18:04,968 - ERROR - root - MainThread : An error occurred while processing request: 'VerificationData' object has no attribute 'user_data'
+2023-09-26 11:26:31,499 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-26 11:26:31,533 - INFO - sqlalchemy.engine.Engine - MainThread : SELECT user.id AS user_id, user.first_name AS user_first_name, user.last_name AS user_last_name, user.date_of_birth AS user_date_of_birth, user.sex AS user_sex, user.email AS user_email, user.hashed_password AS user_hashed_password 
+FROM user 
+WHERE user.email = %(email_1)s 
+ LIMIT %(param_1)s
+2023-09-26 11:26:31,537 - INFO - sqlalchemy.engine.Engine - MainThread : [generated in 0.00974s] {'email_1': 'denilkuriancc@gmail.com', 'param_1': 1}
+2023-09-26 11:26:35,061 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-09-26 11:27:14,321 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-26 11:27:14,333 - INFO - sqlalchemy.engine.Engine - MainThread : INSERT INTO user (first_name, last_name, date_of_birth, sex, email, hashed_password) VALUES (%(first_name)s, %(last_name)s, %(date_of_birth)s, %(sex)s, %(email)s, %(hashed_password)s)
+2023-09-26 11:27:14,335 - INFO - sqlalchemy.engine.Engine - MainThread : [generated in 0.00562s] {'first_name': None, 'last_name': None, 'date_of_birth': None, 'sex': None, 'email': 'denilkuriancc@gmail.com', 'hashed_password': None}
+2023-09-26 11:27:14,340 - INFO - sqlalchemy.engine.Engine - MainThread : ROLLBACK
+2023-09-26 11:27:14,351 - ERROR - root - MainThread : An error occurred while processing request: (mysql.connector.errors.IntegrityError) 1048 (23000): Column 'first_name' cannot be null
+[SQL: INSERT INTO user (first_name, last_name, date_of_birth, sex, email, hashed_password) VALUES (%(first_name)s, %(last_name)s, %(date_of_birth)s, %(sex)s, %(email)s, %(hashed_password)s)]
+[parameters: {'first_name': None, 'last_name': None, 'date_of_birth': None, 'sex': None, 'email': 'denilkuriancc@gmail.com', 'hashed_password': None}]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+2023-09-26 11:30:00,792 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-26 11:30:00,814 - INFO - sqlalchemy.engine.Engine - MainThread : SELECT user.id AS user_id, user.first_name AS user_first_name, user.last_name AS user_last_name, user.date_of_birth AS user_date_of_birth, user.sex AS user_sex, user.email AS user_email, user.hashed_password AS user_hashed_password 
+FROM user 
+WHERE user.email = %(email_1)s 
+ LIMIT %(param_1)s
+2023-09-26 11:30:00,815 - INFO - sqlalchemy.engine.Engine - MainThread : [generated in 0.00100s] {'email_1': 'denilkuriancc@gmail.com', 'param_1': 1}
+2023-09-26 11:30:04,223 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-09-26 11:30:28,235 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-26 11:30:28,245 - INFO - sqlalchemy.engine.Engine - MainThread : INSERT INTO user (first_name, last_name, date_of_birth, sex, email, hashed_password) VALUES (%(first_name)s, %(last_name)s, %(date_of_birth)s, %(sex)s, %(email)s, %(hashed_password)s)
+2023-09-26 11:30:28,246 - INFO - sqlalchemy.engine.Engine - MainThread : [generated in 0.00684s] {'first_name': 'John', 'last_name': 'Doe', 'date_of_birth': '1990-01-01', 'sex': 'Male', 'email': 'denilkuriancc@gmail.com', 'hashed_password': None}
+2023-09-26 11:30:28,248 - INFO - sqlalchemy.engine.Engine - MainThread : COMMIT
+2023-09-26 11:30:28,260 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-26 11:30:28,270 - INFO - sqlalchemy.engine.Engine - MainThread : SELECT user.id, user.first_name, user.last_name, user.date_of_birth, user.sex, user.email, user.hashed_password 
+FROM user 
+WHERE user.id = %(pk_1)s
+2023-09-26 11:30:28,271 - INFO - sqlalchemy.engine.Engine - MainThread : [generated in 0.00534s] {'pk_1': 1}
+2023-09-26 11:30:28,284 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-09-26 11:31:12,724 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-26 11:31:12,727 - INFO - sqlalchemy.engine.Engine - MainThread : SELECT user.id AS user_id, user.first_name AS user_first_name, user.last_name AS user_last_name, user.date_of_birth AS user_date_of_birth, user.sex AS user_sex, user.email AS user_email, user.hashed_password AS user_hashed_password 
+FROM user 
+WHERE user.email = %(email_1)s 
+ LIMIT %(param_1)s
+2023-09-26 11:31:12,729 - INFO - sqlalchemy.engine.Engine - MainThread : [cached since 71.92s ago] {'email_1': 'denilkuriancc@gmail.com', 'param_1': 1}
+2023-09-26 11:31:12,735 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-09-26 11:32:05,625 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-26 11:32:05,627 - INFO - sqlalchemy.engine.Engine - MainThread : SELECT user.id AS user_id, user.first_name AS user_first_name, user.last_name AS user_last_name, user.date_of_birth AS user_date_of_birth, user.sex AS user_sex, user.email AS user_email, user.hashed_password AS user_hashed_password 
+FROM user 
+WHERE user.email = %(email_1)s 
+ LIMIT %(param_1)s
+2023-09-26 11:32:05,628 - INFO - sqlalchemy.engine.Engine - MainThread : [cached since 124.8s ago] {'email_1': 'denilkurian@gmail.com', 'param_1': 1}
+2023-09-26 11:32:05,636 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-09-26 11:32:12,736 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-26 11:32:12,739 - INFO - sqlalchemy.engine.Engine - MainThread : SELECT user.id AS user_id, user.first_name AS user_first_name, user.last_name AS user_last_name, user.date_of_birth AS user_date_of_birth, user.sex AS user_sex, user.email AS user_email, user.hashed_password AS user_hashed_password 
+FROM user 
+WHERE user.email = %(email_1)s 
+ LIMIT %(param_1)s
+2023-09-26 11:32:12,739 - INFO - sqlalchemy.engine.Engine - MainThread : [cached since 131.9s ago] {'email_1': 'denilkuriancc@gmail.com', 'param_1': 1}
+2023-09-26 11:32:12,746 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-09-26 11:32:20,742 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-26 11:32:20,743 - INFO - sqlalchemy.engine.Engine - MainThread : SELECT user.id AS user_id, user.first_name AS user_first_name, user.last_name AS user_last_name, user.date_of_birth AS user_date_of_birth, user.sex AS user_sex, user.email AS user_email, user.hashed_password AS user_hashed_password 
+FROM user 
+WHERE user.email = %(email_1)s 
+ LIMIT %(param_1)s
+2023-09-26 11:32:20,744 - INFO - sqlalchemy.engine.Engine - MainThread : [cached since 139.9s ago] {'email_1': 'denilkuriancc@gmail.com', 'param_1': 1}
+2023-09-26 11:32:20,756 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-09-26 11:34:51,004 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-26 11:34:51,023 - INFO - sqlalchemy.engine.Engine - MainThread : SELECT user.id AS user_id, user.first_name AS user_first_name, user.last_name AS user_last_name, user.date_of_birth AS user_date_of_birth, user.sex AS user_sex, user.email AS user_email, user.hashed_password AS user_hashed_password 
+FROM user 
+WHERE user.email = %(email_1)s 
+ LIMIT %(param_1)s
+2023-09-26 11:34:51,024 - INFO - sqlalchemy.engine.Engine - MainThread : [generated in 0.00842s] {'email_1': 'denilkuriancc@gmail.com', 'param_1': 1}
+2023-09-26 11:34:51,917 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-09-26 11:39:06,851 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-26 11:39:06,864 - INFO - sqlalchemy.engine.Engine - MainThread : SELECT user.id AS user_id, user.first_name AS user_first_name, user.last_name AS user_last_name, user.date_of_birth AS user_date_of_birth, user.sex AS user_sex, user.email AS user_email, user.hashed_password AS user_hashed_password 
+FROM user 
+WHERE user.email = %(email_1)s 
+ LIMIT %(param_1)s
+2023-09-26 11:39:06,864 - INFO - sqlalchemy.engine.Engine - MainThread : [generated in 0.00097s] {'email_1': 'denilkurian@gmail.com', 'param_1': 1}
+2023-09-26 11:39:10,387 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-09-26 11:40:09,715 - ERROR - root - MainThread : An error occurred while processing request: 'hashed_password'
+2023-09-26 12:08:36,771 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-26 12:08:36,787 - INFO - sqlalchemy.engine.Engine - MainThread : SELECT user.id AS user_id, user.first_name AS user_first_name, user.last_name AS user_last_name, user.date_of_birth AS user_date_of_birth, user.sex AS user_sex, user.email AS user_email, user.hashed_password AS user_hashed_password 
+FROM user 
+WHERE user.email = %(email_1)s 
+ LIMIT %(param_1)s
+2023-09-26 12:08:36,789 - INFO - sqlalchemy.engine.Engine - MainThread : [generated in 0.00502s] {'email_1': 'denilkurian@gmail.com', 'param_1': 1}
+2023-09-26 12:08:40,580 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-09-26 12:12:16,726 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-26 12:12:16,734 - INFO - sqlalchemy.engine.Engine - MainThread : SELECT user.id AS user_id, user.first_name AS user_first_name, user.last_name AS user_last_name, user.date_of_birth AS user_date_of_birth, user.sex AS user_sex, user.email AS user_email, user.hashed_password AS user_hashed_password 
+FROM user 
+WHERE user.email = %(email_1)s 
+ LIMIT %(param_1)s
+2023-09-26 12:12:16,736 - INFO - sqlalchemy.engine.Engine - MainThread : [generated in 0.00247s] {'email_1': 'denilkurian@gmail.com', 'param_1': 1}
+2023-09-26 12:12:20,441 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-09-26 12:13:17,670 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-26 12:13:17,673 - INFO - sqlalchemy.engine.Engine - MainThread : INSERT INTO user (first_name, last_name, date_of_birth, sex, email, hashed_password) VALUES (%(first_name)s, %(last_name)s, %(date_of_birth)s, %(sex)s, %(email)s, %(hashed_password)s)
+2023-09-26 12:13:17,674 - INFO - sqlalchemy.engine.Engine - MainThread : [generated in 0.00104s] {'first_name': None, 'last_name': None, 'date_of_birth': None, 'sex': None, 'email': 'denilkurian@gmail.com', 'hashed_password': '$2b$12$zhZcLsnDeA27UJe.PkR0Cuzp1VvEFa9mBqyiA9yzN0DpVuzFuL./2'}
+2023-09-26 12:13:17,675 - INFO - sqlalchemy.engine.Engine - MainThread : ROLLBACK
+2023-09-26 12:16:38,901 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-26 12:16:38,927 - INFO - sqlalchemy.engine.Engine - MainThread : SELECT user.id AS user_id, user.first_name AS user_first_name, user.last_name AS user_last_name, user.date_of_birth AS user_date_of_birth, user.sex AS user_sex, user.email AS user_email, user.hashed_password AS user_hashed_password 
+FROM user 
+WHERE user.email = %(email_1)s 
+ LIMIT %(param_1)s
+2023-09-26 12:16:38,934 - INFO - sqlalchemy.engine.Engine - MainThread : [generated in 0.00759s] {'email_1': 'denilkuriancc@gmail.com', 'param_1': 1}
+2023-09-26 12:16:42,631 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-09-26 12:17:12,472 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-26 12:17:12,476 - INFO - sqlalchemy.engine.Engine - MainThread : INSERT INTO user (first_name, last_name, date_of_birth, sex, email, hashed_password) VALUES (%(first_name)s, %(last_name)s, %(date_of_birth)s, %(sex)s, %(email)s, %(hashed_password)s)
+2023-09-26 12:17:12,477 - INFO - sqlalchemy.engine.Engine - MainThread : [generated in 0.00142s] {'first_name': 'string', 'last_name': 'string', 'date_of_birth': datetime.datetime(2023, 9, 26, 6, 46, 51, 62000, tzinfo=TzInfo(UTC)), 'sex': 'string', 'email': 'denilkuriancc@gmail.com', 'hashed_password': '$2b$12$iee2udFmW03RtSJzbPmgVe.228XHbQrIBBedBHxEezjytaPj3QuqO'}
+2023-09-26 12:17:12,479 - INFO - sqlalchemy.engine.Engine - MainThread : COMMIT
+2023-09-26 12:17:12,497 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-26 12:17:12,501 - INFO - sqlalchemy.engine.Engine - MainThread : SELECT user.id, user.first_name, user.last_name, user.date_of_birth, user.sex, user.email, user.hashed_password 
+FROM user 
+WHERE user.id = %(pk_1)s
+2023-09-26 12:17:12,502 - INFO - sqlalchemy.engine.Engine - MainThread : [generated in 0.00271s] {'pk_1': 1}
+2023-09-26 12:17:12,514 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-09-26 12:19:58,444 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-26 12:19:58,477 - INFO - sqlalchemy.engine.Engine - MainThread : SELECT user.id AS user_id, user.first_name AS user_first_name, user.last_name AS user_last_name, user.date_of_birth AS user_date_of_birth, user.sex AS user_sex, user.email AS user_email, user.hashed_password AS user_hashed_password 
+FROM user 
+WHERE user.email = %(email_1)s 
+ LIMIT %(param_1)s
+2023-09-26 12:19:58,477 - INFO - sqlalchemy.engine.Engine - MainThread : [generated in 0.00092s] {'email_1': 'denilkuriancc@gmail.com', 'param_1': 1}
+2023-09-26 12:19:59,318 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-09-26 12:21:55,086 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-26 12:21:55,089 - INFO - sqlalchemy.engine.Engine - MainThread : SELECT user.id AS user_id, user.first_name AS user_first_name, user.last_name AS user_last_name, user.date_of_birth AS user_date_of_birth, user.sex AS user_sex, user.email AS user_email, user.hashed_password AS user_hashed_password 
+FROM user 
+WHERE user.email = %(email_1)s 
+ LIMIT %(param_1)s
+2023-09-26 12:21:55,089 - INFO - sqlalchemy.engine.Engine - MainThread : [cached since 116.6s ago] {'email_1': 'denilkurian@gmail.com', 'param_1': 1}
+2023-09-26 12:21:55,105 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-09-26 12:22:02,626 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-26 12:22:02,628 - INFO - sqlalchemy.engine.Engine - MainThread : SELECT user.id AS user_id, user.first_name AS user_first_name, user.last_name AS user_last_name, user.date_of_birth AS user_date_of_birth, user.sex AS user_sex, user.email AS user_email, user.hashed_password AS user_hashed_password 
+FROM user 
+WHERE user.email = %(email_1)s 
+ LIMIT %(param_1)s
+2023-09-26 12:22:02,637 - INFO - sqlalchemy.engine.Engine - MainThread : [cached since 124.2s ago] {'email_1': 'denilkuriancc@gmail.com', 'param_1': 1}
+2023-09-26 12:22:03,261 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-09-26 12:22:28,571 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-26 12:22:28,594 - INFO - sqlalchemy.engine.Engine - MainThread : SELECT user.id AS user_id, user.first_name AS user_first_name, user.last_name AS user_last_name, user.date_of_birth AS user_date_of_birth, user.sex AS user_sex, user.email AS user_email, user.hashed_password AS user_hashed_password 
+FROM user 
+WHERE user.email = %(email_1)s 
+ LIMIT %(param_1)s
+2023-09-26 12:22:28,595 - INFO - sqlalchemy.engine.Engine - MainThread : [cached since 150.1s ago] {'email_1': 'denilkuriancc@gmail.com', 'param_1': 1}
+2023-09-26 12:22:29,152 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-09-26 12:34:31,665 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-26 12:34:31,683 - INFO - sqlalchemy.engine.Engine - MainThread : SELECT user.id AS user_id, user.first_name AS user_first_name, user.last_name AS user_last_name, user.date_of_birth AS user_date_of_birth, user.sex AS user_sex, user.email AS user_email, user.hashed_password AS user_hashed_password 
+FROM user 
+WHERE user.email = %(email_1)s 
+ LIMIT %(param_1)s
+2023-09-26 12:34:31,684 - INFO - sqlalchemy.engine.Engine - MainThread : [generated in 0.00205s] {'email_1': 'denilkurian@gmail.com', 'param_1': 1}
+2023-09-26 12:34:31,689 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-09-26 12:34:31,692 - ERROR - root - MainThread : An error occurred while processing request: name 'registration_details' is not defined
+2023-09-26 12:35:10,857 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-26 12:35:10,874 - INFO - sqlalchemy.engine.Engine - MainThread : SELECT user.id AS user_id, user.first_name AS user_first_name, user.last_name AS user_last_name, user.date_of_birth AS user_date_of_birth, user.sex AS user_sex, user.email AS user_email, user.hashed_password AS user_hashed_password 
+FROM user 
+WHERE user.email = %(email_1)s 
+ LIMIT %(param_1)s
+2023-09-26 12:35:10,875 - INFO - sqlalchemy.engine.Engine - MainThread : [generated in 0.01157s] {'email_1': 'denilkurian@gmail.com', 'param_1': 1}
+2023-09-26 12:35:14,380 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-09-26 12:35:49,578 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-26 12:35:49,583 - INFO - sqlalchemy.engine.Engine - MainThread : INSERT INTO user (first_name, last_name, date_of_birth, sex, email, hashed_password) VALUES (%(first_name)s, %(last_name)s, %(date_of_birth)s, %(sex)s, %(email)s, %(hashed_password)s)
+2023-09-26 12:35:49,585 - INFO - sqlalchemy.engine.Engine - MainThread : [generated in 0.00337s] {'first_name': 'string', 'last_name': None, 'date_of_birth': None, 'sex': None, 'email': 'denilkurian@gmail.com', 'hashed_password': 'Denil_@123'}
+2023-09-26 12:35:49,587 - INFO - sqlalchemy.engine.Engine - MainThread : COMMIT
+2023-09-26 12:35:49,599 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-26 12:35:49,605 - INFO - sqlalchemy.engine.Engine - MainThread : SELECT user.id, user.first_name, user.last_name, user.date_of_birth, user.sex, user.email, user.hashed_password 
+FROM user 
+WHERE user.id = %(pk_1)s
+2023-09-26 12:35:49,606 - INFO - sqlalchemy.engine.Engine - MainThread : [generated in 0.00310s] {'pk_1': 1}
+2023-09-26 12:35:49,618 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-09-26 12:36:32,661 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-26 12:36:32,673 - INFO - sqlalchemy.engine.Engine - MainThread : SELECT user.id AS user_id, user.first_name AS user_first_name, user.last_name AS user_last_name, user.date_of_birth AS user_date_of_birth, user.sex AS user_sex, user.email AS user_email, user.hashed_password AS user_hashed_password 
+FROM user 
+WHERE user.email = %(email_1)s 
+ LIMIT %(param_1)s
+2023-09-26 12:36:32,674 - INFO - sqlalchemy.engine.Engine - MainThread : [cached since 81.81s ago] {'email_1': 'denilkurian@gmail.com', 'param_1': 1}
+2023-09-26 12:36:32,681 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-09-26 12:36:32,683 - ERROR - root - MainThread : An error occurred while processing request: hash could not be identified
+2023-09-26 12:43:33,836 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-26 12:43:33,852 - INFO - sqlalchemy.engine.Engine - MainThread : SELECT user.id AS user_id, user.first_name AS user_first_name, user.last_name AS user_last_name, user.date_of_birth AS user_date_of_birth, user.sex AS user_sex, user.email AS user_email, user.hashed_password AS user_hashed_password 
+FROM user 
+WHERE user.email = %(email_1)s 
+ LIMIT %(param_1)s
+2023-09-26 12:43:33,861 - INFO - sqlalchemy.engine.Engine - MainThread : [generated in 0.02080s] {'email_1': 'denilkuriancc@gmail.com', 'param_1': 1}
+2023-09-26 12:43:38,570 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-09-26 12:44:08,679 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-26 12:44:08,689 - INFO - sqlalchemy.engine.Engine - MainThread : INSERT INTO user (first_name, last_name, date_of_birth, sex, email, hashed_password) VALUES (%(first_name)s, %(last_name)s, %(date_of_birth)s, %(sex)s, %(email)s, %(hashed_password)s)
+2023-09-26 12:44:08,697 - INFO - sqlalchemy.engine.Engine - MainThread : [generated in 0.00406s] {'first_name': None, 'last_name': None, 'date_of_birth': None, 'sex': None, 'email': 'denilkuriancc@gmail.com', 'hashed_password': 'Denil_@123'}
+2023-09-26 12:44:08,701 - INFO - sqlalchemy.engine.Engine - MainThread : ROLLBACK
+2023-09-26 12:44:08,704 - ERROR - root - MainThread : An error occurred while processing request: (mysql.connector.errors.IntegrityError) 1048 (23000): Column 'first_name' cannot be null
+[SQL: INSERT INTO user (first_name, last_name, date_of_birth, sex, email, hashed_password) VALUES (%(first_name)s, %(last_name)s, %(date_of_birth)s, %(sex)s, %(email)s, %(hashed_password)s)]
+[parameters: {'first_name': None, 'last_name': None, 'date_of_birth': None, 'sex': None, 'email': 'denilkuriancc@gmail.com', 'hashed_password': 'Denil_@123'}]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+2023-09-26 12:46:05,666 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-26 12:46:05,684 - INFO - sqlalchemy.engine.Engine - MainThread : SELECT user.id AS user_id, user.first_name AS user_first_name, user.last_name AS user_last_name, user.date_of_birth AS user_date_of_birth, user.sex AS user_sex, user.email AS user_email, user.hashed_password AS user_hashed_password 
+FROM user 
+WHERE user.email = %(email_1)s 
+ LIMIT %(param_1)s
+2023-09-26 12:46:05,686 - INFO - sqlalchemy.engine.Engine - MainThread : [generated in 0.00228s] {'email_1': 'denilkurian@gmail.com', 'param_1': 1}
+2023-09-26 12:46:09,371 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-09-26 12:47:02,296 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-26 12:47:02,324 - INFO - sqlalchemy.engine.Engine - MainThread : INSERT INTO user (first_name, last_name, date_of_birth, sex, email, hashed_password) VALUES (%(first_name)s, %(last_name)s, %(date_of_birth)s, %(sex)s, %(email)s, %(hashed_password)s)
+2023-09-26 12:47:02,325 - INFO - sqlalchemy.engine.Engine - MainThread : [generated in 0.02495s] {'first_name': 'string', 'last_name': None, 'date_of_birth': None, 'sex': None, 'email': 'denilkurian@gmail.com', 'hashed_password': 'Denil_@123'}
+2023-09-26 12:47:02,327 - INFO - sqlalchemy.engine.Engine - MainThread : COMMIT
+2023-09-26 12:47:02,333 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-26 12:47:02,343 - INFO - sqlalchemy.engine.Engine - MainThread : SELECT user.id, user.first_name, user.last_name, user.date_of_birth, user.sex, user.email, user.hashed_password 
+FROM user 
+WHERE user.id = %(pk_1)s
+2023-09-26 12:47:02,343 - INFO - sqlalchemy.engine.Engine - MainThread : [generated in 0.00219s] {'pk_1': 1}
+2023-09-26 12:47:02,359 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-09-26 12:48:22,645 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-26 12:48:22,647 - INFO - sqlalchemy.engine.Engine - MainThread : SELECT user.id AS user_id, user.first_name AS user_first_name, user.last_name AS user_last_name, user.date_of_birth AS user_date_of_birth, user.sex AS user_sex, user.email AS user_email, user.hashed_password AS user_hashed_password 
+FROM user 
+WHERE user.email = %(email_1)s 
+ LIMIT %(param_1)s
+2023-09-26 12:48:22,649 - INFO - sqlalchemy.engine.Engine - MainThread : [cached since 137s ago] {'email_1': 'denilkurian@gmail.com', 'param_1': 1}
+2023-09-26 12:48:22,661 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-09-26 12:48:22,668 - ERROR - root - MainThread : An error occurred while processing request: hash could not be identified
+2023-09-26 13:02:24,789 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-26 13:02:24,801 - INFO - sqlalchemy.engine.Engine - MainThread : SELECT user.id AS user_id, user.first_name AS user_first_name, user.last_name AS user_last_name, user.date_of_birth AS user_date_of_birth, user.sex AS user_sex, user.email AS user_email, user.hashed_password AS user_hashed_password 
+FROM user 
+WHERE user.email = %(email_1)s 
+ LIMIT %(param_1)s
+2023-09-26 13:02:24,803 - INFO - sqlalchemy.engine.Engine - MainThread : [generated in 0.00326s] {'email_1': 'denilkuriancc@gmail.com', 'param_1': 1}
+2023-09-26 13:02:28,332 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-09-26 13:03:18,083 - ERROR - root - MainThread : An error occurred while processing request: 'VerifyOtp' object has no attribute 'first_name'
+2023-09-26 13:55:26,389 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-26 13:55:26,417 - INFO - sqlalchemy.engine.Engine - MainThread : SELECT user.id AS user_id, user.first_name AS user_first_name, user.last_name AS user_last_name, user.date_of_birth AS user_date_of_birth, user.sex AS user_sex, user.email AS user_email, user.hashed_password AS user_hashed_password 
+FROM user 
+WHERE user.email = %(email_1)s 
+ LIMIT %(param_1)s
+2023-09-26 13:55:26,425 - INFO - sqlalchemy.engine.Engine - MainThread : [generated in 0.01838s] {'email_1': 'denilkuriancc@gmail.com', 'param_1': 1}
+2023-09-26 13:55:31,079 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-09-26 13:56:08,924 - ERROR - root - MainThread : An error occurred while processing request: 'hashed_password'
+2023-09-26 13:59:15,347 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-26 13:59:15,356 - INFO - sqlalchemy.engine.Engine - MainThread : SELECT user.id AS user_id, user.first_name AS user_first_name, user.last_name AS user_last_name, user.date_of_birth AS user_date_of_birth, user.sex AS user_sex, user.email AS user_email, user.hashed_password AS user_hashed_password 
+FROM user 
+WHERE user.email = %(email_1)s 
+ LIMIT %(param_1)s
+2023-09-26 13:59:15,358 - INFO - sqlalchemy.engine.Engine - MainThread : [generated in 0.00221s] {'email_1': 'denilkuriancc@gmail.com', 'param_1': 1}
+2023-09-26 13:59:18,899 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-09-26 14:00:15,929 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-26 14:00:15,949 - INFO - sqlalchemy.engine.Engine - MainThread : INSERT INTO user (first_name, last_name, date_of_birth, sex, email, hashed_password) VALUES (%(first_name)s, %(last_name)s, %(date_of_birth)s, %(sex)s, %(email)s, %(hashed_password)s)
+2023-09-26 14:00:15,949 - INFO - sqlalchemy.engine.Engine - MainThread : [generated in 0.01576s] {'first_name': 'string', 'last_name': 'string', 'date_of_birth': datetime.datetime(2023, 9, 26, 8, 28, 58, 450000, tzinfo=TzInfo(UTC)), 'sex': 'string', 'email': 'denilkuriancc@gmail.com', 'hashed_password': '$2b$12$NJ7GccRZDV5vvis9bb.3l.fGu/VdlVU5YEgkK8D98sImu5HP7EdtG'}
+2023-09-26 14:00:15,955 - INFO - sqlalchemy.engine.Engine - MainThread : COMMIT
+2023-09-26 14:00:51,091 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-26 14:00:51,093 - INFO - sqlalchemy.engine.Engine - MainThread : SELECT user.id AS user_id, user.first_name AS user_first_name, user.last_name AS user_last_name, user.date_of_birth AS user_date_of_birth, user.sex AS user_sex, user.email AS user_email, user.hashed_password AS user_hashed_password 
+FROM user 
+WHERE user.email = %(email_1)s 
+ LIMIT %(param_1)s
+2023-09-26 14:00:51,095 - INFO - sqlalchemy.engine.Engine - MainThread : [cached since 95.74s ago] {'email_1': 'denilkuriancc@gmail.com', 'param_1': 1}
+2023-09-26 14:00:51,550 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-09-26 14:00:57,878 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-26 14:00:57,886 - INFO - sqlalchemy.engine.Engine - MainThread : SELECT user.id AS user_id, user.first_name AS user_first_name, user.last_name AS user_last_name, user.date_of_birth AS user_date_of_birth, user.sex AS user_sex, user.email AS user_email, user.hashed_password AS user_hashed_password 
+FROM user 
+WHERE user.email = %(email_1)s 
+ LIMIT %(param_1)s
+2023-09-26 14:00:57,888 - INFO - sqlalchemy.engine.Engine - MainThread : [cached since 102.5s ago] {'email_1': 'denilkuriancc@gmail.com', 'param_1': 1}
+2023-09-26 14:00:58,661 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-09-26 14:02:15,550 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-26 14:02:15,552 - INFO - sqlalchemy.engine.Engine - MainThread : SELECT user.id AS user_id, user.first_name AS user_first_name, user.last_name AS user_last_name, user.date_of_birth AS user_date_of_birth, user.sex AS user_sex, user.email AS user_email, user.hashed_password AS user_hashed_password 
+FROM user 
+WHERE user.email = %(email_1)s 
+ LIMIT %(param_1)s
+2023-09-26 14:02:15,554 - INFO - sqlalchemy.engine.Engine - MainThread : [cached since 180.2s ago] {'email_1': 'denilkuriancc@gmail.com', 'param_1': 1}
+2023-09-26 14:02:15,968 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-09-26 14:08:31,460 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-26 14:08:31,466 - INFO - sqlalchemy.engine.Engine - MainThread : SELECT user.id AS user_id, user.first_name AS user_first_name, user.last_name AS user_last_name, user.date_of_birth AS user_date_of_birth, user.sex AS user_sex, user.email AS user_email, user.hashed_password AS user_hashed_password 
+FROM user 
+WHERE user.email = %(email_1)s 
+ LIMIT %(param_1)s
+2023-09-26 14:08:31,475 - INFO - sqlalchemy.engine.Engine - MainThread : [generated in 0.00979s] {'email_1': 'denilkurian@gmail.com', 'param_1': 1}
+2023-09-26 14:08:31,481 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-09-26 14:08:42,419 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-26 14:08:42,421 - INFO - sqlalchemy.engine.Engine - MainThread : SELECT user.id AS user_id, user.first_name AS user_first_name, user.last_name AS user_last_name, user.date_of_birth AS user_date_of_birth, user.sex AS user_sex, user.email AS user_email, user.hashed_password AS user_hashed_password 
+FROM user 
+WHERE user.email = %(email_1)s 
+ LIMIT %(param_1)s
+2023-09-26 14:08:42,423 - INFO - sqlalchemy.engine.Engine - MainThread : [cached since 10.96s ago] {'email_1': 'denilkurian@gmail.com', 'param_1': 1}
+2023-09-26 14:08:42,431 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-09-26 14:08:47,630 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-26 14:08:47,634 - INFO - sqlalchemy.engine.Engine - MainThread : SELECT user.id AS user_id, user.first_name AS user_first_name, user.last_name AS user_last_name, user.date_of_birth AS user_date_of_birth, user.sex AS user_sex, user.email AS user_email, user.hashed_password AS user_hashed_password 
+FROM user 
+WHERE user.email = %(email_1)s 
+ LIMIT %(param_1)s
+2023-09-26 14:08:47,638 - INFO - sqlalchemy.engine.Engine - MainThread : [cached since 16.17s ago] {'email_1': 'denilkurian@gmail.com', 'param_1': 1}
+2023-09-26 14:08:51,216 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-09-26 14:10:19,827 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-26 14:10:19,832 - INFO - sqlalchemy.engine.Engine - MainThread : SELECT user.id AS user_id, user.first_name AS user_first_name, user.last_name AS user_last_name, user.date_of_birth AS user_date_of_birth, user.sex AS user_sex, user.email AS user_email, user.hashed_password AS user_hashed_password 
+FROM user 
+WHERE user.email = %(email_1)s 
+ LIMIT %(param_1)s
+2023-09-26 14:10:19,832 - INFO - sqlalchemy.engine.Engine - MainThread : [generated in 0.00081s] {'email_1': 'denilkuriancc@gmail.com', 'param_1': 1}
+2023-09-26 14:10:23,142 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-09-26 14:12:00,830 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-26 14:12:00,835 - INFO - sqlalchemy.engine.Engine - MainThread : INSERT INTO user (first_name, last_name, date_of_birth, sex, email, hashed_password) VALUES (%(first_name)s, %(last_name)s, %(date_of_birth)s, %(sex)s, %(email)s, %(hashed_password)s)
+2023-09-26 14:12:00,838 - INFO - sqlalchemy.engine.Engine - MainThread : [generated in 0.00375s] {'first_name': 'string', 'last_name': 'string', 'date_of_birth': datetime.datetime(2023, 9, 26, 8, 38, 13, 632000, tzinfo=TzInfo(UTC)), 'sex': 'string', 'email': 'denilkuriancc@gmail.com', 'hashed_password': '$2b$12$a.AA5ryjel1ouMcQxi//geUloFV5h52FfjcMplmUKF7XSO5xfgPF6'}
+2023-09-26 14:12:00,841 - INFO - sqlalchemy.engine.Engine - MainThread : COMMIT
+2023-09-26 14:19:26,465 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-26 14:19:26,492 - INFO - sqlalchemy.engine.Engine - MainThread : SELECT user.id AS user_id, user.first_name AS user_first_name, user.last_name AS user_last_name, user.date_of_birth AS user_date_of_birth, user.sex AS user_sex, user.email AS user_email, user.hashed_password AS user_hashed_password 
+FROM user 
+WHERE user.email = %(email_1)s 
+ LIMIT %(param_1)s
+2023-09-26 14:19:26,499 - INFO - sqlalchemy.engine.Engine - MainThread : [generated in 0.01531s] {'email_1': 'denilkurian@gmail.com', 'param_1': 1}
+2023-09-26 14:19:30,068 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-09-26 14:20:03,819 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-26 14:20:03,833 - INFO - sqlalchemy.engine.Engine - MainThread : SELECT user.id AS user_id, user.first_name AS user_first_name, user.last_name AS user_last_name, user.date_of_birth AS user_date_of_birth, user.sex AS user_sex, user.email AS user_email, user.hashed_password AS user_hashed_password 
+FROM user 
+WHERE user.email = %(email_1)s 
+ LIMIT %(param_1)s
+2023-09-26 14:20:03,833 - INFO - sqlalchemy.engine.Engine - MainThread : [cached since 37.35s ago] {'email_1': 'denilkuriancc@gmail.com', 'param_1': 1}
+2023-09-26 14:20:07,107 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-09-26 14:23:10,341 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-26 14:23:10,344 - INFO - sqlalchemy.engine.Engine - MainThread : SELECT user.id AS user_id, user.first_name AS user_first_name, user.last_name AS user_last_name, user.date_of_birth AS user_date_of_birth, user.sex AS user_sex, user.email AS user_email, user.hashed_password AS user_hashed_password 
+FROM user 
+WHERE user.email = %(email_1)s 
+ LIMIT %(param_1)s
+2023-09-26 14:23:10,344 - INFO - sqlalchemy.engine.Engine - MainThread : [cached since 223.9s ago] {'email_1': 'denilkuriancc@gmail.com', 'param_1': 1}
+2023-09-26 14:23:13,764 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-09-26 14:24:24,592 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-26 14:24:24,615 - INFO - sqlalchemy.engine.Engine - MainThread : SELECT user.id AS user_id, user.first_name AS user_first_name, user.last_name AS user_last_name, user.date_of_birth AS user_date_of_birth, user.sex AS user_sex, user.email AS user_email, user.hashed_password AS user_hashed_password 
+FROM user 
+WHERE user.email = %(email_1)s 
+ LIMIT %(param_1)s
+2023-09-26 14:24:24,616 - INFO - sqlalchemy.engine.Engine - MainThread : [generated in 0.01856s] {'email_1': 'denilkuriancc@gmail.com', 'param_1': 1}
+2023-09-26 14:24:27,910 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-09-26 14:25:53,537 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-26 14:25:53,543 - INFO - sqlalchemy.engine.Engine - MainThread : INSERT INTO user (first_name, last_name, date_of_birth, sex, email, hashed_password) VALUES (%(first_name)s, %(last_name)s, %(date_of_birth)s, %(sex)s, %(email)s, %(hashed_password)s)
+2023-09-26 14:25:53,543 - INFO - sqlalchemy.engine.Engine - MainThread : [generated in 0.00415s] {'first_name': 'string', 'last_name': 'string', 'date_of_birth': datetime.datetime(2023, 9, 26, 8, 49, 2, 472000, tzinfo=TzInfo(UTC)), 'sex': 'string', 'email': 'denilkuriancc@gmail.com', 'hashed_password': '$2b$12$YTMr//UIibdHBCpOzYyU7uwZaXdgb9f9.Y3FgtUjRyWZIiuRX4Nu2'}
+2023-09-26 14:25:53,554 - INFO - sqlalchemy.engine.Engine - MainThread : COMMIT
+2023-09-26 14:33:16,268 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-26 14:33:16,313 - INFO - sqlalchemy.engine.Engine - MainThread : SELECT user.id AS user_id, user.first_name AS user_first_name, user.last_name AS user_last_name, user.date_of_birth AS user_date_of_birth, user.sex AS user_sex, user.email AS user_email, user.hashed_password AS user_hashed_password 
+FROM user 
+WHERE user.email = %(email_1)s 
+ LIMIT %(param_1)s
+2023-09-26 14:33:16,313 - INFO - sqlalchemy.engine.Engine - MainThread : [generated in 0.02556s] {'email_1': 'denilkuriancc@gmail.com', 'param_1': 1}
+2023-09-26 14:33:16,321 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-09-26 14:34:20,025 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-26 14:34:20,052 - INFO - sqlalchemy.engine.Engine - MainThread : SELECT user.id AS user_id, user.first_name AS user_first_name, user.last_name AS user_last_name, user.date_of_birth AS user_date_of_birth, user.sex AS user_sex, user.email AS user_email, user.hashed_password AS user_hashed_password 
+FROM user 
+WHERE user.email = %(email_1)s 
+ LIMIT %(param_1)s
+2023-09-26 14:34:20,053 - INFO - sqlalchemy.engine.Engine - MainThread : [generated in 0.01240s] {'email_1': 'denilkuriancc@gmail.com', 'param_1': 1}
+2023-09-26 14:34:20,061 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-09-26 14:34:48,144 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-26 14:34:48,160 - INFO - sqlalchemy.engine.Engine - MainThread : SELECT user.id AS user_id, user.first_name AS user_first_name, user.last_name AS user_last_name, user.date_of_birth AS user_date_of_birth, user.sex AS user_sex, user.email AS user_email, user.hashed_password AS user_hashed_password 
+FROM user 
+WHERE user.email = %(email_1)s 
+ LIMIT %(param_1)s
+2023-09-26 14:34:48,160 - INFO - sqlalchemy.engine.Engine - MainThread : [cached since 28.12s ago] {'email_1': 'denilkurian@gmail.com', 'param_1': 1}
+2023-09-26 14:34:51,707 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-09-26 14:35:19,086 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-26 14:35:19,089 - INFO - sqlalchemy.engine.Engine - MainThread : SELECT user.id AS user_id, user.first_name AS user_first_name, user.last_name AS user_last_name, user.date_of_birth AS user_date_of_birth, user.sex AS user_sex, user.email AS user_email, user.hashed_password AS user_hashed_password 
+FROM user 
+WHERE user.email = %(email_1)s 
+ LIMIT %(param_1)s
+2023-09-26 14:35:19,093 - INFO - sqlalchemy.engine.Engine - MainThread : [cached since 59.05s ago] {'email_1': 'denilkurn@gmail.com', 'param_1': 1}
+2023-09-26 14:35:22,448 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-09-26 14:38:56,805 - ERROR - root - MainThread : An error occurred while processing request: 'denilkurian@gmail.com'
+2023-09-26 14:39:44,092 - ERROR - root - MainThread : An error occurred while processing request: 'denilkurian@gmail.com'
+2023-09-26 14:41:01,514 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-26 14:41:01,524 - INFO - sqlalchemy.engine.Engine - MainThread : SELECT user.id AS user_id, user.first_name AS user_first_name, user.last_name AS user_last_name, user.date_of_birth AS user_date_of_birth, user.sex AS user_sex, user.email AS user_email, user.hashed_password AS user_hashed_password 
+FROM user 
+WHERE user.email = %(email_1)s 
+ LIMIT %(param_1)s
+2023-09-26 14:41:01,526 - INFO - sqlalchemy.engine.Engine - MainThread : [generated in 0.00226s] {'email_1': 'denilkurian@gmail.com', 'param_1': 1}
+2023-09-26 14:41:04,888 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-09-26 14:41:21,020 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-26 14:41:21,025 - INFO - sqlalchemy.engine.Engine - MainThread : SELECT user.id AS user_id, user.first_name AS user_first_name, user.last_name AS user_last_name, user.date_of_birth AS user_date_of_birth, user.sex AS user_sex, user.email AS user_email, user.hashed_password AS user_hashed_password 
+FROM user 
+WHERE user.email = %(email_1)s 
+ LIMIT %(param_1)s
+2023-09-26 14:41:21,028 - INFO - sqlalchemy.engine.Engine - MainThread : [cached since 19.5s ago] {'email_1': 'denilkurianfff@gmail.com', 'param_1': 1}
+2023-09-26 14:41:24,332 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-09-26 14:42:31,072 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-26 14:42:31,076 - INFO - sqlalchemy.engine.Engine - MainThread : INSERT INTO user (first_name, last_name, date_of_birth, sex, email, hashed_password) VALUES (%(first_name)s, %(last_name)s, %(date_of_birth)s, %(sex)s, %(email)s, %(hashed_password)s)
+2023-09-26 14:42:31,076 - INFO - sqlalchemy.engine.Engine - MainThread : [generated in 0.00114s] {'first_name': 'string', 'last_name': 'string', 'date_of_birth': datetime.datetime(2023, 9, 26, 8, 49, 2, 472000, tzinfo=TzInfo(UTC)), 'sex': 'string', 'email': 'denilkurian@gmail.com', 'hashed_password': '$2b$12$L5Deo1YL0OKsWHSOvIrqEuY5R9fmQRn0yyIvJoS6.VtBY/LQKuqIe'}
+2023-09-26 14:42:31,082 - INFO - sqlalchemy.engine.Engine - MainThread : COMMIT
+2023-09-26 14:45:05,703 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-26 14:45:05,712 - INFO - sqlalchemy.engine.Engine - MainThread : SELECT user.id AS user_id, user.first_name AS user_first_name, user.last_name AS user_last_name, user.date_of_birth AS user_date_of_birth, user.sex AS user_sex, user.email AS user_email, user.hashed_password AS user_hashed_password 
+FROM user 
+WHERE user.email = %(email_1)s 
+ LIMIT %(param_1)s
+2023-09-26 14:45:05,712 - INFO - sqlalchemy.engine.Engine - MainThread : [generated in 0.00398s] {'email_1': 'denilkurian@gmail.com', 'param_1': 1}
+2023-09-26 14:45:09,087 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-09-26 14:45:22,505 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-26 14:45:22,507 - INFO - sqlalchemy.engine.Engine - MainThread : SELECT user.id AS user_id, user.first_name AS user_first_name, user.last_name AS user_last_name, user.date_of_birth AS user_date_of_birth, user.sex AS user_sex, user.email AS user_email, user.hashed_password AS user_hashed_password 
+FROM user 
+WHERE user.email = %(email_1)s 
+ LIMIT %(param_1)s
+2023-09-26 14:45:22,508 - INFO - sqlalchemy.engine.Engine - MainThread : [cached since 16.8s ago] {'email_1': 'denilkurianff@gmail.com', 'param_1': 1}
+2023-09-26 14:45:25,915 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-09-26 14:46:23,676 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-26 14:46:23,679 - INFO - sqlalchemy.engine.Engine - MainThread : INSERT INTO user (first_name, last_name, date_of_birth, sex, email, hashed_password) VALUES (%(first_name)s, %(last_name)s, %(date_of_birth)s, %(sex)s, %(email)s, %(hashed_password)s)
+2023-09-26 14:46:23,680 - INFO - sqlalchemy.engine.Engine - MainThread : [generated in 0.00126s] {'first_name': 'string', 'last_name': 'string', 'date_of_birth': datetime.datetime(2023, 9, 26, 8, 49, 2, 472000, tzinfo=TzInfo(UTC)), 'sex': 'string', 'email': 'denilkurian@gmail.com', 'hashed_password': '$2b$12$pST9iKEdu4MmHvl4Xq7IDOj0Oa1CxLMiz4RZSlCr8YHu.8BDJPd7O'}
+2023-09-26 14:46:23,690 - INFO - sqlalchemy.engine.Engine - MainThread : COMMIT
+2023-09-26 14:47:00,519 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-26 14:47:00,521 - INFO - sqlalchemy.engine.Engine - MainThread : INSERT INTO user (first_name, last_name, date_of_birth, sex, email, hashed_password) VALUES (%(first_name)s, %(last_name)s, %(date_of_birth)s, %(sex)s, %(email)s, %(hashed_password)s)
+2023-09-26 14:47:00,522 - INFO - sqlalchemy.engine.Engine - MainThread : [cached since 36.84s ago] {'first_name': 'string', 'last_name': 'string', 'date_of_birth': datetime.datetime(2023, 9, 26, 8, 49, 2, 472000, tzinfo=TzInfo(UTC)), 'sex': 'string', 'email': 'denilkurianff@gmail.com', 'hashed_password': '$2b$12$HgG/gX1MhxWhoND8Bk790eawJiRqv3BLaqP1kMiqVUaJtL2oGP33K'}
+2023-09-26 14:47:00,538 - INFO - sqlalchemy.engine.Engine - MainThread : COMMIT
+2023-09-26 15:00:24,409 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-26 15:00:24,411 - INFO - sqlalchemy.engine.Engine - MainThread : SELECT user.id AS user_id, user.first_name AS user_first_name, user.last_name AS user_last_name, user.date_of_birth AS user_date_of_birth, user.sex AS user_sex, user.email AS user_email, user.hashed_password AS user_hashed_password 
+FROM user 
+WHERE user.email = %(email_1)s 
+ LIMIT %(param_1)s
+2023-09-26 15:00:24,413 - INFO - sqlalchemy.engine.Engine - MainThread : [cached since 918.7s ago] {'email_1': 'denilkuriandd@gmail.com', 'param_1': 1}
+2023-09-26 15:00:28,448 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-09-26 16:14:03,333 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-26 16:14:03,347 - INFO - sqlalchemy.engine.Engine - MainThread : SELECT user.id AS user_id, user.first_name AS user_first_name, user.last_name AS user_last_name, user.date_of_birth AS user_date_of_birth, user.sex AS user_sex, user.email AS user_email, user.hashed_password AS user_hashed_password 
+FROM user 
+WHERE user.email = %(email_1)s 
+ LIMIT %(param_1)s
+2023-09-26 16:14:03,348 - INFO - sqlalchemy.engine.Engine - MainThread : [generated in 0.00116s] {'email_1': 'denilkurian@gmail.com', 'param_1': 1}
+2023-09-26 16:14:03,354 - INFO - sqlalchemy.engine.Engine - MainThread : INSERT INTO otp_verification (email, otp, expiration, first_name, last_name, sex, date_of_birth) VALUES (%(email)s, %(otp)s, %(expiration)s, %(first_name)s, %(last_name)s, %(sex)s, %(date_of_birth)s)
+2023-09-26 16:14:03,354 - INFO - sqlalchemy.engine.Engine - MainThread : [generated in 0.00101s] {'email': 'denilkurian@gmail.com', 'otp': '715780', 'expiration': datetime.datetime(2023, 9, 26, 10, 49, 3, 351099), 'first_name': 'string', 'last_name': 'string', 'sex': 'string', 'date_of_birth': datetime.datetime(2023, 9, 26, 10, 43, 44, 927000, tzinfo=TzInfo(UTC))}
+2023-09-26 16:14:03,356 - INFO - sqlalchemy.engine.Engine - MainThread : COMMIT
+2023-09-26 16:15:42,690 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-26 16:15:42,699 - INFO - sqlalchemy.engine.Engine - MainThread : SELECT otp_verification.id AS otp_verification_id, otp_verification.email AS otp_verification_email, otp_verification.otp AS otp_verification_otp, otp_verification.expiration AS otp_verification_expiration, otp_verification.first_name AS otp_verification_first_name, otp_verification.last_name AS otp_verification_last_name, otp_verification.sex AS otp_verification_sex, otp_verification.date_of_birth AS otp_verification_date_of_birth 
+FROM otp_verification 
+WHERE otp_verification.email = %(email_1)s 
+ LIMIT %(param_1)s
+2023-09-26 16:15:42,702 - INFO - sqlalchemy.engine.Engine - MainThread : [generated in 0.00940s] {'email_1': 'denilkurian@gmail.com', 'param_1': 1}
+2023-09-26 16:15:42,710 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-09-26 16:15:42,720 - ERROR - root - MainThread : An error occurred while processing request: 'OTPVerification' object has no attribute 'hashed_password'
+2023-09-26 16:21:42,250 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-26 16:21:42,256 - INFO - sqlalchemy.engine.Engine - MainThread : SELECT user.id AS user_id, user.first_name AS user_first_name, user.last_name AS user_last_name, user.date_of_birth AS user_date_of_birth, user.sex AS user_sex, user.email AS user_email, user.hashed_password AS user_hashed_password 
+FROM user 
+WHERE user.email = %(email_1)s 
+ LIMIT %(param_1)s
+2023-09-26 16:21:42,256 - INFO - sqlalchemy.engine.Engine - MainThread : [generated in 0.00129s] {'email_1': 'denilkurian@gmail.com', 'param_1': 1}
+2023-09-26 16:21:45,839 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-09-26 16:21:53,319 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-26 16:21:53,329 - INFO - sqlalchemy.engine.Engine - MainThread : SELECT user.id AS user_id, user.first_name AS user_first_name, user.last_name AS user_last_name, user.date_of_birth AS user_date_of_birth, user.sex AS user_sex, user.email AS user_email, user.hashed_password AS user_hashed_password 
+FROM user 
+WHERE user.email = %(email_1)s 
+ LIMIT %(param_1)s
+2023-09-26 16:21:53,333 - INFO - sqlalchemy.engine.Engine - MainThread : [cached since 11.08s ago] {'email_1': 'denilkuriancc@gmail.com', 'param_1': 1}
+2023-09-26 16:21:56,679 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-09-26 16:23:58,893 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-09-26 16:23:58,907 - INFO - sqlalchemy.engine.Engine - MainThread : INSERT INTO user (first_name, last_name, date_of_birth, sex, email, hashed_password) VALUES (%(first_name)s, %(last_name)s, %(date_of_birth)s, %(sex)s, %(email)s, %(hashed_password)s)
+2023-09-26 16:23:58,907 - INFO - sqlalchemy.engine.Engine - MainThread : [generated in 0.01113s] {'first_name': 'string', 'last_name': 'string', 'date_of_birth': datetime.datetime(2023, 9, 26, 10, 51, 26, 579000, tzinfo=TzInfo(UTC)), 'sex': 'string', 'email': 'denilkurian@gmail.com', 'hashed_password': '$2b$12$V7A8oJPLgJpMPeanAKBe1eaeC9WLBlSeyxI7TWOlwqSoA6m0r8huW'}
+2023-09-26 16:23:58,915 - INFO - sqlalchemy.engine.Engine - MainThread : COMMIT
