@@ -60,42 +60,43 @@ class VerifyOtp(BaseModel):
 
 @router.post("/verify-otp/", tags=['authentication'])
 async def verify_otp_and_create_account(verification_data: VerifyOtp, db: Session = Depends(get_db)):
-    # Check if the OTP exists in storage
-    print("At verify:",otp_storage)
-    stored_verification = otp_storage[verification_data.email]
-    if not stored_verification or datetime.utcnow() > stored_verification['expiration']:
-        raise HTTPException(status_code=400, detail="OTP has expired or is invalid")
+    try:
+        # Check if the OTP exists in storage
+        stored_verification = otp_storage[verification_data.email]
 
-    # Check if the provided OTP matches the stored OTP
-    if verification_data.otp != stored_verification['otp']:
-        raise HTTPException(status_code=400, detail="Invalid OTP")
+        if not stored_verification:
+            raise HTTPException(status_code=400, detail="OTP not found")
 
-    # OTP is valid, create the user account
-    user = User(
-        email=verification_data.email,
-        hashed_password=get_password_hash(stored_verification['hashed_password']),
-        first_name=stored_verification['first_name'],
-        last_name=stored_verification['last_name'],
-        sex=stored_verification['sex'],
-        date_of_birth=stored_verification['date_of_birth']
-    )
+        if datetime.utcnow() > stored_verification['expiration']:
+            raise HTTPException(status_code=400, detail="OTP has expired")
 
-    # Add the user to the database
-    db.add(user)
-    db.commit()
+        if verification_data.otp != stored_verification['otp']:
+            raise HTTPException(status_code=400, detail="Invalid OTP")
 
-    # Remove the OTP from storage as it's no longer needed
-    del otp_storage[verification_data.email]
+        # OTP is valid, create the user account
+        user = User(
+            email=verification_data.email,
+            hashed_password=get_password_hash(stored_verification['hashed_password']),
+            first_name=stored_verification['first_name'],
+            last_name=stored_verification['last_name'],
+            sex=stored_verification['sex'],
+            date_of_birth=stored_verification['date_of_birth']
+        )
 
-    return {"message": "Account created successfully"}
+        # Add the user to the database
+        db.add(user)
+        db.commit()
 
+        # Remove the OTP from storage as it's no longer needed
+        del otp_storage[verification_data.email]
 
+        return {"message": "Account created successfully"}
 
+    except KeyError:
+        raise HTTPException(status_code=400, detail="OTP not found")
 
-
-
-
-
+    except HTTPException as e:
+        raise e
 
 
 

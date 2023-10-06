@@ -9,6 +9,10 @@ from metadata_services import fetch_tables,metadata_table,fetch_summary,lineage_
 from backend_services import fast_api,caching_redis
 from authentication_authorisation import login_token,registration,verify_otp
 from circuitbreaker_config import circuit_breaker
+from authentication_authorisation.auth_api import google_auth
+
+from fastapi_session import SessionManager
+from starlette.middleware.sessions import SessionMiddleware
 
 
 ####### metadata
@@ -49,8 +53,10 @@ configure_logging()
 app.middleware("http")(error_middleware)
 
 
+app.include_router(google_auth.router)
 
+app.add_middleware(SessionMiddleware, secret_key="6cdd8f6b7b75557788f2351f4e33f45a564bb4ba8ad77be270dd342c6d2c8af7")
 
-
-
+# Initialize the SessionManager
+manager = SessionManager()
 

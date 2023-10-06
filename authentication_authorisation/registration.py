@@ -11,10 +11,7 @@ import random
 import string
 from .verify_otp import otp_storage,send_otp_email
 
-
 router = APIRouter()
-
-
 
 @router.post("/register/", tags=['authentication'])
 async def register_user(user: UserCreate, db: Session = Depends(get_db)):
