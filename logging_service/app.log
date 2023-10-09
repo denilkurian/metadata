@@ -1698,3 +1698,10 @@ WHERE user.email = %(email_1)s
 2023-10-06 18:05:30,168 - INFO - sqlalchemy.engine.Engine - MainThread : [generated in 0.00534s] {'first_name': 'string', 'last_name': 'string', 'date_of_birth': datetime.datetime(2023, 10, 6, 12, 33, 4, 323000, tzinfo=TzInfo(UTC)), 'sex': 'string', 'email': 'sony@gmail.com', 'hashed_password': '$2b$12$bd47sICWKbTkqBDKNcmHBuzvyvEuoXIYl0ugxUeEoGCxzs/Nr7w/y'}
 2023-10-06 18:05:30,173 - INFO - sqlalchemy.engine.Engine - MainThread : COMMIT
 2023-10-06 18:32:31,934 - ERROR - root - MainThread : An error occurred while processing request: 'access_token'
+2023-10-09 09:36:52,673 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-10-09 09:36:52,682 - INFO - sqlalchemy.engine.Engine - MainThread : SELECT user.id AS user_id, user.first_name AS user_first_name, user.last_name AS user_last_name, user.date_of_birth AS user_date_of_birth, user.sex AS user_sex, user.email AS user_email, user.hashed_password AS user_hashed_password 
+FROM user 
+WHERE user.email = %(email_1)s 
+ LIMIT %(param_1)s
+2023-10-09 09:36:52,683 - INFO - sqlalchemy.engine.Engine - MainThread : [generated in 0.00127s] {'email_1': 'denilkurian@gmail.com', 'param_1': 1}
+2023-10-09 09:36:53,220 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
