@@ -6,13 +6,17 @@ from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
 from passlib.context import CryptContext
 from datetime import datetime, timedelta
 import jwt
-from decouple import AutoConfig
+from .private_config import *
+# from decouple import AutoConfig
 
-config = AutoConfig()
+# config = AutoConfig()
 
-SECRET_KEY = config('SECRET_KEY')
-ALGORITHM = config('ALGORITHM')
-ACCESS_TOKEN_EXPIRE_MINUTES = config('ACCESS_TOKEN_EXPIRE_MINUTES', cast=int)
+# config_file_path = '/user/home/Downloads/fast_api_demo/metadata/.env'
+# SECRET_KEY = config('SECRET_KEY', default='', config_file=config_file_path)
+
+# SECRET_KEY = config('SECRET_KEY')
+# ALGORITHM = config('ALGORITHM')
+# ACCESS_TOKEN_EXPIRE_MINUTES = config('ACCESS_TOKEN_EXPIRE_MINUTES', cast=int)
 
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
 

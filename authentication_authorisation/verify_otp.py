@@ -1,5 +1,5 @@
 from fastapi import APIRouter, HTTPException,Depends
-from decouple import config
+from authentication_authorisation.private_config import *
 from email.mime.text import MIMEText
 import smtplib
 from datetime import datetime
@@ -12,12 +12,13 @@ from sqlalchemy.orm import Session
 router = APIRouter()
 
 
+
 ###### function for details about email sending
 def send_otp_email(recipient_email, otp):
-    SMTP_SERVER = config('SMTP_SERVER', default='')
-    SMTP_PORT = config('SMTP_PORT', default=587, cast=int)
-    SMTP_PASSWORD = config('SMTP_PASSWORD', default='')
-    SENDER_EMAIL = config('SENDER_EMAIL', default='')
+    # SMTP_SERVER = config('SMTP_SERVER', default='')
+    # SMTP_PORT = config('SMTP_PORT', default=587, cast=int)
+    # SMTP_PASSWORD = config('SMTP_PASSWORD', default='')
+    # SENDER_EMAIL = config('SENDER_EMAIL', default='')
 
     subject = "OTP Verification"
     message = f"Your OTP: {otp}"

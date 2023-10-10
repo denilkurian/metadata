@@ -2,7 +2,7 @@ from fastapi import APIRouter, HTTPException
 from sqlalchemy import text
 import networkx as nx
 from sqlalchemy.orm import sessionmaker
-from sqlalchemy.exc import NoSuchTableError  # Import the exception
+from sqlalchemy.exc import NoSuchTableError 
 from database.database import engine
 
 router = APIRouter()

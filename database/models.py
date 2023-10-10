@@ -28,7 +28,7 @@ class User(Base):
     email = Column(String(255),unique = True,index = True,nullable = False)
     hashed_password = Column(String(255))
 
-    google_auth = relationship("GoogleAuthUser", back_populates="user")
+
 
 
 
@@ -60,15 +60,9 @@ class OTPVerification(Base):
 
 
 
-class GoogleAuthUser(Base):
-    __tablename__ = "google_auth_user"
 
-    id = Column(Integer, primary_key=True, index=True)
-    google_id = Column(String(255), unique=True, nullable=False)  # Google's unique identifier for the user
-    user_id = Column(Integer, ForeignKey("user.id"), nullable=False)  # ForeignKey to link with your existing user model
 
-    # Relationship to your existing User model
-    user = relationship("User", back_populates="google_auth")
+
 
 
 

@@ -3,19 +3,19 @@
 import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
-from decouple import config
+from authentication_authorisation.private_config import *
 from fastapi import HTTPException
 
 
 def send_email_notification(db_name):
     # Email configuration
     
-    SMTP_SERVER = config('SMTP_SERVER', default='')
-    SMTP_PORT = config('SMTP_PORT', default=587, cast=int)
-    SMTP_USERNAME = config('SMTP_USERNAME', default='')
-    SMTP_PASSWORD = config('SMTP_PASSWORD', default='')
-    SENDER_EMAIL = config('SENDER_EMAIL', default='')
-    RECIPIENT_EMAIL = config('RECIPIENT_EMAIL', default='')
+    # SMTP_SERVER = config('SMTP_SERVER', default='')
+    # SMTP_PORT = config('SMTP_PORT', default=587, cast=int)
+    # SMTP_USERNAME = config('SMTP_USERNAME', default='')
+    # SMTP_PASSWORD = config('SMTP_PASSWORD', default='')
+    # SENDER_EMAIL = config('SENDER_EMAIL', default='')
+    # RECIPIENT_EMAIL = config('RECIPIENT_EMAIL', default='')
 
 
     subject = f"Metadata Crawl Job Finished for {db_name}"
