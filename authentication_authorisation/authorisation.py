@@ -8,7 +8,7 @@ from database.models import User
 from database.database import get_db
 import jwt
 
-from authentication_authorisation.auth_api.google_auth import get_user_info_from_google,exchange_code_for_access_token
+from authentication_authorisation.auth_api.google_auth import get_user_info_from_google
 
 
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")

@@ -2363,3 +2363,86 @@ WHERE user.email = %(email_1)s
  LIMIT %(param_1)s
 2023-10-17 12:05:04,273 - INFO - sqlalchemy.engine.Engine - MainThread : [cached since 408.5s ago] {'email_1': 'string@gmail.com', 'param_1': 1}
 2023-10-17 12:05:04,495 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-10-17 14:18:58,121 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-10-17 14:18:58,130 - INFO - sqlalchemy.engine.Engine - MainThread : INSERT INTO user (first_name, last_name, date_of_birth, sex, email, hashed_password) VALUES (%(first_name)s, %(last_name)s, %(date_of_birth)s, %(sex)s, %(email)s, %(hashed_password)s)
+2023-10-17 14:18:58,130 - INFO - sqlalchemy.engine.Engine - MainThread : [generated in 0.00068s] {'first_name': None, 'last_name': None, 'date_of_birth': None, 'sex': None, 'email': 'denilk@datapmi.com', 'hashed_password': None}
+2023-10-17 14:18:58,132 - INFO - sqlalchemy.engine.Engine - MainThread : ROLLBACK
+2023-10-17 14:18:58,136 - ERROR - root - MainThread : An error occurred while processing request: (mysql.connector.errors.IntegrityError) 1062 (23000): Duplicate entry 'denilk@datapmi.com' for key 'user.ix_user_email'
+[SQL: INSERT INTO user (first_name, last_name, date_of_birth, sex, email, hashed_password) VALUES (%(first_name)s, %(last_name)s, %(date_of_birth)s, %(sex)s, %(email)s, %(hashed_password)s)]
+[parameters: {'first_name': None, 'last_name': None, 'date_of_birth': None, 'sex': None, 'email': 'denilk@datapmi.com', 'hashed_password': None}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2023-10-17 14:20:09,000 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : BEGIN (implicit)
+2023-10-17 14:20:09,003 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : SELECT product.id AS product_id, product.name AS product_name, product.product_type AS product_product_type, product.price AS product_price 
+FROM product 
+ LIMIT %(param_1)s, %(param_2)s
+2023-10-17 14:20:09,003 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : [generated in 0.00072s] {'param_1': 0, 'param_2': 10}
+2023-10-17 14:20:09,010 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-10-17 14:20:42,340 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-10-17 14:20:42,341 - INFO - sqlalchemy.engine.Engine - MainThread : INSERT INTO user (first_name, last_name, date_of_birth, sex, email, hashed_password) VALUES (%(first_name)s, %(last_name)s, %(date_of_birth)s, %(sex)s, %(email)s, %(hashed_password)s)
+2023-10-17 14:20:42,341 - INFO - sqlalchemy.engine.Engine - MainThread : [cached since 104.2s ago] {'first_name': None, 'last_name': None, 'date_of_birth': None, 'sex': None, 'email': 'denilkuriancc@gmail.com', 'hashed_password': None}
+2023-10-17 14:20:42,343 - INFO - sqlalchemy.engine.Engine - MainThread : COMMIT
+2023-10-17 14:22:08,987 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : BEGIN (implicit)
+2023-10-17 14:22:08,990 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : SELECT user.id AS user_id, user.first_name AS user_first_name, user.last_name AS user_last_name, user.date_of_birth AS user_date_of_birth, user.sex AS user_sex, user.email AS user_email, user.hashed_password AS user_hashed_password 
+FROM user 
+WHERE user.email = %(email_1)s 
+ LIMIT %(param_1)s
+2023-10-17 14:22:08,991 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : [generated in 0.00080s] {'email_1': 'denilkuriancc@gmail.com', 'param_1': 1}
+2023-10-17 14:22:08,994 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : INSERT INTO product (name, product_type, price) VALUES (%(name)s, %(product_type)s, %(price)s)
+2023-10-17 14:22:08,994 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : [generated in 0.00071s] {'name': 'string', 'product_type': 'string', 'price': 0}
+2023-10-17 14:22:08,995 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : COMMIT
+2023-10-17 14:22:09,010 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : BEGIN (implicit)
+2023-10-17 14:22:09,012 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : SELECT product.id, product.name, product.product_type, product.price 
+FROM product 
+WHERE product.id = %(pk_1)s
+2023-10-17 14:22:09,012 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : [generated in 0.00083s] {'pk_1': 17}
+2023-10-17 14:22:09,015 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-10-17 14:23:47,471 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : BEGIN (implicit)
+2023-10-17 14:23:47,474 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : SELECT user.id AS user_id, user.first_name AS user_first_name, user.last_name AS user_last_name, user.date_of_birth AS user_date_of_birth, user.sex AS user_sex, user.email AS user_email, user.hashed_password AS user_hashed_password 
+FROM user 
+WHERE user.email = %(email_1)s 
+ LIMIT %(param_1)s
+2023-10-17 14:23:47,475 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : [cached since 98.49s ago] {'email_1': 'denilkuriancc@gmail.com', 'param_1': 1}
+2023-10-17 14:23:47,489 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : INSERT INTO product (name, product_type, price) VALUES (%(name)s, %(product_type)s, %(price)s)
+2023-10-17 14:23:47,490 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : [cached since 98.5s ago] {'name': 'LG', 'product_type': 'Television', 'price': 18000}
+2023-10-17 14:23:47,491 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-10-17 14:23:47,494 - ERROR - root - MainThread : An error occurred while processing request: (mysql.connector.errors.ProgrammingError) 1146 (42S02): Table 'ecommerce.product' doesn't exist
+[SQL: INSERT INTO product (name, product_type, price) VALUES (%(name)s, %(product_type)s, %(price)s)]
+[parameters: {'name': 'LG', 'product_type': 'Television', 'price': 18000}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2023-10-17 14:24:13,586 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : BEGIN (implicit)
+2023-10-17 14:24:13,589 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : SELECT user.id AS user_id, user.first_name AS user_first_name, user.last_name AS user_last_name, user.date_of_birth AS user_date_of_birth, user.sex AS user_sex, user.email AS user_email, user.hashed_password AS user_hashed_password 
+FROM user 
+WHERE user.email = %(email_1)s 
+ LIMIT %(param_1)s
+2023-10-17 14:24:13,589 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : [generated in 0.00065s] {'email_1': 'denilkuriancc@gmail.com', 'param_1': 1}
+2023-10-17 14:24:13,594 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : INSERT INTO product (name, product_type, price) VALUES (%(name)s, %(product_type)s, %(price)s)
+2023-10-17 14:24:13,594 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : [generated in 0.00067s] {'name': 'LG', 'product_type': 'Television', 'price': 18000}
+2023-10-17 14:24:13,596 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : COMMIT
+2023-10-17 14:24:13,610 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : BEGIN (implicit)
+2023-10-17 14:24:13,612 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : SELECT product.id, product.name, product.product_type, product.price 
+FROM product 
+WHERE product.id = %(pk_1)s
+2023-10-17 14:24:13,612 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : [generated in 0.00061s] {'pk_1': 1}
+2023-10-17 14:24:13,614 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-10-17 14:24:57,583 - INFO - sqlalchemy.engine.Engine - MainThread : BEGIN (implicit)
+2023-10-17 14:24:57,584 - INFO - sqlalchemy.engine.Engine - MainThread : SELECT user.id AS user_id, user.first_name AS user_first_name, user.last_name AS user_last_name, user.date_of_birth AS user_date_of_birth, user.sex AS user_sex, user.email AS user_email, user.hashed_password AS user_hashed_password 
+FROM user 
+WHERE user.email = %(email_1)s 
+ LIMIT %(param_1)s
+2023-10-17 14:24:57,584 - INFO - sqlalchemy.engine.Engine - MainThread : [cached since 44s ago] {'email_1': 'string@gmail.com', 'param_1': 1}
+2023-10-17 14:24:57,837 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
+2023-10-17 14:25:32,655 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : BEGIN (implicit)
+2023-10-17 14:25:32,655 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : SELECT user.id AS user_id, user.first_name AS user_first_name, user.last_name AS user_last_name, user.date_of_birth AS user_date_of_birth, user.sex AS user_sex, user.email AS user_email, user.hashed_password AS user_hashed_password 
+FROM user 
+WHERE user.email = %(email_1)s 
+ LIMIT %(param_1)s
+2023-10-17 14:25:32,655 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : [cached since 79.07s ago] {'email_1': 'string@gmail.com', 'param_1': 1}
+2023-10-17 14:25:32,658 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : INSERT INTO product (name, product_type, price) VALUES (%(name)s, %(product_type)s, %(price)s)
+2023-10-17 14:25:32,658 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : [cached since 79.06s ago] {'name': 'Vguard', 'product_type': 'mixi', 'price': 1800}
+2023-10-17 14:25:32,659 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : COMMIT
+2023-10-17 14:25:32,673 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : BEGIN (implicit)
+2023-10-17 14:25:32,674 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : SELECT product.id, product.name, product.product_type, product.price 
+FROM product 
+WHERE product.id = %(pk_1)s
+2023-10-17 14:25:32,674 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : [cached since 79.06s ago] {'pk_1': 2}
+2023-10-17 14:25:32,677 - INFO - sqlalchemy.engine.Engine - AnyIO worker thread : ROLLBACK
