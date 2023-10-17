@@ -21,15 +21,12 @@ class Product(Base):
 class User(Base):
     __tablename__ = "user"
     id = Column(Integer, primary_key=True, index=True)
-    first_name = Column(String(255),nullable = False,index = True)
+    first_name = Column(String(255),nullable = True,index = True)
     last_name = Column(String(255), index = True)
     date_of_birth = Column(DateTime)
     sex = Column(String(50))
     email = Column(String(255),unique = True,index = True,nullable = False)
     hashed_password = Column(String(255))
-
-
-
 
 
 #### model for add to favorites (products)
@@ -48,7 +45,6 @@ class Favorite(Base):
 ########## temporarily saving otp data
 class OTPVerification(Base):
     __tablename__ = "otp_verification"
-
     id = Column(Integer, primary_key=True, index=True)
     email = Column(String(50), unique=True, index=True)
     otp = Column(String(50))
@@ -57,7 +53,6 @@ class OTPVerification(Base):
     last_name = Column(String(50))
     sex = Column(String(50))
     date_of_birth = Column(DateTime)
-
 
 
 

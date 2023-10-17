@@ -22,7 +22,7 @@ selected_database = "mysql"  # Change this to the desired database type
 
 # Database connection parameters
 username = "root"
-password = "denil@123"
+password = "denil_kurian@123"
 host = "localhost"
 port = 3306
 database_name = "ecommerce"

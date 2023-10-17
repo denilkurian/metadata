@@ -44,7 +44,6 @@ def create_product(user: ProductCreate, db: Session = Depends(get_db),current_us
     return db_user
 
 
-
 ### update a product
 @router.put("/products/{product_id}", response_model=ProductResponse ,tags=['product'])
 def update_product(product_id: int, updated_user: ProductCreate, db: Session = Depends(get_db),current_user: User = Depends(get_current_user)):

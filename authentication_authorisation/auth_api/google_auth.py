@@ -7,15 +7,13 @@ from pydantic import BaseModel
 from starlette.responses import JSONResponse
 from fastapi.responses import RedirectResponse
 from database.models import *
-from database.database import SessionLocal
 import requests
-from sqlalchemy.orm import Session
 
 
 router = APIRouter()
 
-
-@router.get("/auth/google", tags =["google_auth"])
+######### api to redirect to google auth page
+@router.get("/auth/google", tags=["google_auth"])
 def google_oauth_login():
     # Construct the Google OAuth2 URL with your client ID and redirect URI
     google_oauth_url = "https://accounts.google.com/o/oauth2/auth"
@@ -23,7 +21,7 @@ def google_oauth_login():
     redirect_uri = "http://127.0.0.1:8000/auth/google/callback"
     scope = "openid profile email"  # Define required scopes
     auth_url = f"{google_oauth_url}?client_id={client_id}&redirect_uri={redirect_uri}&scope={scope}&response_type=code" 
-    return RedirectResponse(url=auth_url, status_code=302)
+    return auth_url
 
 
 
@@ -31,6 +29,7 @@ GOOGLE_REDIRECT_URI = "http://127.0.0.1:8000/auth/google/callback"
 GOOGLE_TOKEN_URL = "https://accounts.google.com/o/oauth2/token"
 
 
+######## getting token from google
 def exchange_code_for_access_token(code: str) -> dict:
     data = {
         "code": code,
@@ -43,7 +42,6 @@ def exchange_code_for_access_token(code: str) -> dict:
 
     if response.status_code == 200:
         access_token_data = response.json()
-        access_token = access_token_data.get("access_token")
         return access_token_data
     else:
         error_response = response.json()
@@ -51,8 +49,36 @@ def exchange_code_for_access_token(code: str) -> dict:
 
 
 
-import urllib.parse
 
+########## fetching user info from google account , here we fetch email id
+import requests
+
+def get_user_info_from_google(access_token):
+    # Define the Google API endpoint for fetching user info
+    user_info_url = "https://www.googleapis.com/oauth2/v3/userinfo"
+
+    # Set up the headers with the access token
+    headers = {
+        "Authorization": f"Bearer {access_token}"
+    }
+
+    # Make a GET request to the Google API
+    response = requests.get(user_info_url, headers=headers)
+
+    if response.status_code == 200:
+        user_info = response.json()
+        return user_info
+    else:
+        error_message = response.json().get("error_description", "Failed to fetch user info from Google")
+        raise Exception(error_message)
+
+
+
+
+
+########## callback api which give access token after authentication and stores user email in same database.
+import urllib
+from database.database import SessionLocal
 
 
 @router.get("/auth/google/callback", tags=["google_auth"])
@@ -64,16 +90,29 @@ async def google_oauth_callback(request: Request, code: str):
     access_token_data = exchange_code_for_access_token(authorization_code)
 
     if "access_token" in access_token_data:
-        # You have obtained the access token, you can use it for authentication
         access_token = access_token_data["access_token"]
-        # You can return the access token or perform further actions here
-        return JSONResponse(content={"access_token": access_token}, status_code=200)
+        # You can use the access token for authentication or further actions
+
+        # Fetch the user's email from Google (you may need to make an API request)
+        google_user_info = get_user_info_from_google(access_token)
+
+        if "email" in google_user_info:
+            user_email = google_user_info["email"]
+            # Save the email in your User model or perform any other actions
+            user = User(email=user_email)
+            db = SessionLocal()
+            db.add(user)
+            db.commit()
+            db.close()
+
+            # Return the email and access token
+            return JSONResponse(content={"email": user_email, "access_token": access_token}, status_code=200)
+        else:
+            return JSONResponse(content={"error": "Email not obtained from Google"}, status_code=400)
     else:
-        # Handle the case where the access token is not obtained
         error_message = access_token_data.get("error_description", "Access token not obtained.")
         return JSONResponse(content={"error": error_message}, status_code=400)
-
-
+    
 
 
 
