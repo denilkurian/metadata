@@ -74,7 +74,7 @@ def get_user_info_from_google(access_token):
 
 
 
-########## callback api which give access token after authentication and stores user email in same database.
+######### callback api which give access token after authentication and stores user email in same database.
 import urllib
 from database.database import SessionLocal
 
