@@ -10,6 +10,7 @@ from database.models import *
 import requests
 
 
+
 router = APIRouter()
 
 ######### api to redirect to google auth page
@@ -49,7 +50,6 @@ def exchange_code_for_access_token(code: str) -> dict:
 
 
 
-
 ########## fetching user info from google account , here we fetch email id
 import requests
 
@@ -71,8 +71,6 @@ def get_user_info_from_google(access_token):
     else:
         error_message = response.json().get("error_description", "Failed to fetch user info from Google")
         raise Exception(error_message)
-
-
 
 
 
@@ -99,20 +97,28 @@ async def google_oauth_callback(request: Request, code: str):
         if "email" in google_user_info:
             user_email = google_user_info["email"]
             # Save the email in your User model or perform any other actions
-            user = User(email=user_email)
             db = SessionLocal()
-            db.add(user)
-            db.commit()
-            db.close()
+            existing_user = db.query(User).filter(User.email == user_email).first()
 
-            # Return the email and access token
-            return JSONResponse(content={"email": user_email, "access_token": access_token}, status_code=200)
+            if existing_user:
+                db.close()
+                return JSONResponse(content={"error": "User already exists"}, status_code=400)
+            else:
+                # Save the email in your User model or perform any other actions
+                user = User(email=user_email)
+                db.add(user)
+                db.commit()
+                db.close()
+
+                # Return the email and access token
+                return JSONResponse(content={"email": user_email, "access_token": access_token}, status_code=200)
         else:
             return JSONResponse(content={"error": "Email not obtained from Google"}, status_code=400)
     else:
         error_message = access_token_data.get("error_description", "Access token not obtained.")
         return JSONResponse(content={"error": error_message}, status_code=400)
     
+
 
 
 

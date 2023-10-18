@@ -13,6 +13,8 @@ from authentication_authorisation.auth_api.google_auth import get_user_info_from
 
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
 
+
+######## this function is created for the authentication of both google auth user and normal authenticated user
 def get_current_user(token: str = Depends(oauth2_scheme), db: Session = Depends(get_db)):
     credentials_exception = HTTPException(
         status_code=401,
@@ -20,7 +22,6 @@ def get_current_user(token: str = Depends(oauth2_scheme), db: Session = Depends(
         headers={"WWW-Authenticate": "Bearer"},
     )
 
-    # Try to validate the token as a Google token
     try:
         google_user_info = get_user_info_from_google(token)
         if google_user_info is not None:
@@ -45,6 +46,9 @@ def get_current_user(token: str = Depends(oauth2_scheme), db: Session = Depends(
 
     raise credentials_exception
    
+
+from fastapi.routing import APIRouter
+
 
 
 
