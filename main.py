@@ -56,10 +56,7 @@ app.middleware("http")(error_middleware)
 
 app.include_router(google_auth.router)
 
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/master
 
 # Initialize the SessionManager
 manager = SessionManager()
