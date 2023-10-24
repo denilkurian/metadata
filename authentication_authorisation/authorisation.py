@@ -3,7 +3,7 @@
 from fastapi import Depends, HTTPException
 from fastapi.security import OAuth2PasswordBearer
 from sqlalchemy.orm import Session
-from authentication_authorisation.private_config import SECRET_KEY,ALGORITHM
+from .private_config import SECRET_KEY,ALGORITHM
 from database.models import User
 from database.database import get_db
 import jwt

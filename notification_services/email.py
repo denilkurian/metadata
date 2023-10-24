@@ -8,15 +8,6 @@ from fastapi import HTTPException
 
 
 def send_email_notification(db_name):
-    # Email configuration
-    
-    # SMTP_SERVER = config('SMTP_SERVER', default='')
-    # SMTP_PORT = config('SMTP_PORT', default=587, cast=int)
-    # SMTP_USERNAME = config('SMTP_USERNAME', default='')
-    # SMTP_PASSWORD = config('SMTP_PASSWORD', default='')
-    # SENDER_EMAIL = config('SENDER_EMAIL', default='')
-    # RECIPIENT_EMAIL = config('RECIPIENT_EMAIL', default='')
-
 
     subject = f"Metadata Crawl Job Finished for {db_name}"
     message = f"The metadata crawl job for {db_name} has been finished.Database metadata details such as table names column datatype etc are defined successfully"
